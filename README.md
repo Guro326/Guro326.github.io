@@ -22,9 +22,6 @@
  
  <div id="books">
   <input class="search" placeholder="検索" />
-  <button class="sort" data-sort="author">
-    著者で並べ替え
-  </button>
   <button class="sort" data-sort="title">
     タイトルで並べ替え
   </button>
@@ -43,7 +40,7 @@
  
 <script>
 var options = {
-    valueNames: [ 'author' ]
+    valueNames: [ 'title' ]
 };
 
 var userList = new List('books', options);
