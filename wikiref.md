@@ -8,18 +8,72 @@
 
 <div id="type">
 <p>
-<input type="radio" name="type" onClick="type_change('#ref_web')" id="web" value="#ref_web" checked><label for="web">Web出典</label><br>
-<input type="radio" name="type" onClick="type_change('#ref_pdf')" id="pdf" value="#ref_pdf"><label for="pdf">PDF出典</label><br>
-<input type="radio" name="type" onClick="type_change('#ref_archive')" id="archive" value="#ref_archive"><label for="archive">Archive(web.archive.org)を含める場合</label><br>
-<input type="radio" name="type" onClick="type_change('#ref_book')" id="book" value="#ref_book"><label for="book">書籍</label><br>
-<input type="radio" name="type" onClick="type_change('#ref_newspaper')" id="newspaper" value="#ref_newspaper"><label for="newspaper">新聞</label><br>
-<input type="radio" name="type" onClick="type_change('#ref_journal')" id="journal" value="#ref_journal"><label for="journal">論文</label><br>
+<input type="radio" name="type" onClick="type_change('#ref_book')" id="book" value="#ref_book"><label for="book">書籍</label>
+	
+<input type="radio" name="type" onClick="type_change('#ref_web')" id="web" value="#ref_web" checked><label for="web">Web出典</label>
+	
+<input type="radio" name="type" onClick="type_change('#ref_pdf')" id="pdf" value="#ref_pdf"><label for="pdf">PDF出典</label>
+	
+<input type="radio" name="type" onClick="type_change('#ref_archive')" id="archive" value="#ref_archive"><label for="archive">Archive(web.archive.org)を含める場合</label>
+	
+<input type="radio" name="type" onClick="type_change('#ref_newspaper')" id="newspaper" value="#ref_newspaper"><label for="newspaper">新聞</label>
+	
+<input type="radio" name="type" onClick="type_change('#ref_journal')" id="journal" value="#ref_journal"><label for="journal">論文</label>
+	
 <input type="radio" name="type" onClick="type_change('#ref_tweet')" id="tweet" value="#ref_tweet" class="opiton_hide" disabled><label for="tweet" class="opiton_hide">Twitter</label>
+	
 </p>
-<p>
+
 なるべく欄は埋めましょう。特に、<span class="need">※</span>のある欄は必ず入力してください。
-</p>
+
 </div>
+
+<div id="ref_book" class="ref_type">
+<form>
+<table class="ref_input">
+<tr>
+<th colspan="2">書籍</th>
+</tr>
+<tr>
+<td class="first_input">著者名</td><td><input type="text" name="author"></td>
+</tr>
+<tr>
+<td>書名</td><td><input type="text" name="title"><span class="need title">※</span></td>
+</tr>
+<tr>
+<td>発行者</td><td><input type="text" name="publisher" placeholder="出版社名、団体名など"><span class="need publisher">※</span></td>
+</tr>
+<tr>
+<td>
+<input type="radio" name="yearInput" value="#directInput" id="direct" onclick="inputSelect('#directInput','#calenderInput','#directLabel','#calenderLabel')" class="yy_direct" checked="checked">
+<label for="direct" id="directLabel">日付を直接入力</label>
+</td>
+<td>
+<input type="radio" name="yearInput" value="#calenderInput" id="calender" onclick="inputSelect('#calenderInput','#directInput','#calenderLabel','#directLabel')" class="yy_calender">
+<label for="calender" id="calenderLabel">日付をカレンダーから入力</label>
+（どちらか選択）
+</td>
+</tr>
+<tr>
+<td class="book_date">&nbsp;</td><td>
+	<input type="text" name="yearDirect" id="directInput" class="yearInput" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span class="directInputNote">（月日は省略可）</span>
+	<input type="date" name="yearCalender" id="calenderInput" class="yearInput">
+</td>
+</tr>
+<tr>
+<td>ページ番号</td><td><input type="text" name="page" onchange="page_replace()" placeholder="記入例：12、12-13"></td>
+</tr>
+<tr>
+<td>ISBN</td><td><input type="text" name="isbn" placeholder="ハイフンは省略可" onchange="isbn_replace()"></td>
+</tr>
+<tr>
+<td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_book()"><input type="reset" value="入力内容を消す"></td>
+</tr>
+</table>
+</form>
+</div>
+
+
 <div id="ref_web" class="ref_type">
 <form>
 <table class="ref_input">
@@ -95,50 +149,6 @@
 </tr>
 <tr>
 <td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_archive()"><input type="reset" value="入力内容を消す"></td>
-</tr>
-</table>
-</form>
-</div>
-<div id="ref_book" class="ref_type">
-<form>
-<table class="ref_input">
-<tr>
-<th colspan="2">書籍</th>
-</tr>
-<tr>
-<td class="first_input">著者名</td><td><input type="text" name="author"></td>
-</tr>
-<tr>
-<td>書名</td><td><input type="text" name="title"><span class="need title">※</span></td>
-</tr>
-<tr>
-<td>発行者</td><td><input type="text" name="publisher" placeholder="出版社名、団体名など"><span class="need publisher">※</span></td>
-</tr>
-<tr>
-<td>
-<input type="radio" name="yearInput" value="#directInput" id="direct" onclick="inputSelect('#directInput','#calenderInput','#directLabel','#calenderLabel')" class="yy_direct" checked="checked">
-<label for="direct" id="directLabel">日付を直接入力</label>
-</td>
-<td>
-<input type="radio" name="yearInput" value="#calenderInput" id="calender" onclick="inputSelect('#calenderInput','#directInput','#calenderLabel','#directLabel')" class="yy_calender">
-<label for="calender" id="calenderLabel">日付をカレンダーから入力</label>
-（どちらか選択）
-</td>
-</tr>
-<tr>
-<td class="book_date">&nbsp;</td><td>
-	<input type="text" name="yearDirect" id="directInput" class="yearInput" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span class="directInputNote">（月日は省略可）</span>
-	<input type="date" name="yearCalender" id="calenderInput" class="yearInput">
-</td>
-</tr>
-<tr>
-<td>ページ番号</td><td><input type="text" name="page" onchange="page_replace()" placeholder="記入例：12、12-13"></td>
-</tr>
-<tr>
-<td>ISBN</td><td><input type="text" name="isbn" placeholder="ハイフンは省略可" onchange="isbn_replace()"></td>
-</tr>
-<tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_book()"><input type="reset" value="入力内容を消す"></td>
 </tr>
 </table>
 </form>
