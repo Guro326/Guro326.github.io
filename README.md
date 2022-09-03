@@ -1,9 +1,13 @@
 # Guro326.github.io
-チュートリアル
+- チュートリアル
+- すぐに公開された github pages のページ
+- （README.md が表示される）
 
-すぐに公開された github pages のページ
+# おしらせ
+## 今日のお知らせ
+- 今日は9月3日です
+- 次の行
 
-　（README.md が表示される）
  
  [Google先生](https://www.google.co.jp/)
  
