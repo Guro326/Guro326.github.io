@@ -23,8 +23,8 @@
   <input class="search" placeholder="検索" />
   <button class="sort" data-sort="title">
     タイトルで並べ替え
-  </button>
-   <button class="sort" data-sort="title_yomi">
+  </button> 
+  <button class="sort" data-sort="title_yomi">
     yomiで並べ替え
   </button>
   <ul class="list">
