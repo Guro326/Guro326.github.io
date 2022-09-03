@@ -4,3 +4,5 @@
 すぐに公開された github pages のページ
 
 　（README.md が表示される）
+ 
+ [Google先生](https://www.google.co.jp/)
