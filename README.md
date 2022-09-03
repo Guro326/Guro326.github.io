@@ -17,6 +17,7 @@
  
  https://www.google.co.jp/
  
+ 
  ## 新着図書情報
  
  <div id="books">
@@ -24,8 +25,8 @@
   <button class="sort" data-sort="title">
     タイトルで並べ替え
   </button> 
-  <button class="sort" data-sort="title_yomi">
-    yomiで並べ替え
+  <button class="sort" data-sort="author">
+    著者で並べ替え
   </button>
   <ul class="list">
     <!-- _data フォルダの books.csv からデータを取り出す -->
