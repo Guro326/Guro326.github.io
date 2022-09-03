@@ -25,6 +25,9 @@
   <button class="sort" data-sort="author">
     著者で並べ替え
   </button>
+  <button class="sort" data-sort="title">
+    タイトルで並べ替え
+  </button>
   <ul class="list">
     <!-- _data フォルダの books.csv からデータを取り出す -->
     {% for book in site.data.books %}
@@ -41,6 +44,7 @@
 <script>
 var options = {
     valueNames: [ 'title' ]
+    valueNames: [ 'author' ]
 };
 
 var userList = new List('books', options);
