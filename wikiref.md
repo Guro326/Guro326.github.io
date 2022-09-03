@@ -1,10 +1,10 @@
 
-<title>ウィキペディア編集イベント向け | 出典タグを生成する</title>
-
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="ref_tag.js"></script>
 <script type="text/javascript" src="https://ad.xdomain.ne.jp/js/server-php.js"></script>
+
+## ウィキペディア編集イベント向け | 出典タグを生成する
+
 
 <div id="type">
 <p>
