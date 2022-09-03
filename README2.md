@@ -7,6 +7,8 @@
 - すぐに公開された github pages のページ
 - （README.md が表示される）
 
+[Code4Lib JAPAN カンファレンス 2022 チュートリアル](https://github.com/nabeta/c4ljp2022-tutorial/wiki)
+
 # おしらせ
 ## 今日のお知らせ
 - 今日は9月3日です
