@@ -6,3 +6,6 @@
 　（README.md が表示される）
  
  [Google先生](https://www.google.co.jp/)
+ 
+ https://www.google.co.jp/
+ 
