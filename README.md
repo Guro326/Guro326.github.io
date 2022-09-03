@@ -43,7 +43,6 @@
  
 <script>
 var options = {
-    valueNames: [ 'title' ]
     valueNames: [ 'author' ]
 };
 
