@@ -225,3 +225,7 @@
 <p>
 <textarea cols="50" rows="5" id="result" onfocus="this.select()"></textarea>
 </p>
+
+<p>
+初版を作った人 special thanks to：<a href="https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Marine-Blue">利用者:Marine-Blue</a>
+</p>
