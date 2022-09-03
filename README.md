@@ -17,6 +17,8 @@
  
  https://www.google.co.jp/
  
+ ## 新着図書情報
+ 
  <div id="books">
   <input class="search" placeholder="検索" />
   <button class="sort" data-sort="title">
@@ -33,6 +35,7 @@
   </ul>
 </div>
 
+---
  
 <script>
 var options = {
