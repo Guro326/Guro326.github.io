@@ -39,8 +39,8 @@
     <td><input type="text" name="author"></td>
 </tr>
 <tr>
-    <td class="first_input">著者名リンク authorlink<br/>※著者名に[[リンク]]するときにはこちらに<u>も</u>記入</td>
-    <td><input type="text" name="authorlink" placeholder="[[]]は不要"></td>
+    <td>著者名リンク authorlink<br/>※著者名に[[リンク]]するときにはこちらに<u>も</u>記入</td>
+    <td><input type="text" name="author_link" placeholder="[[]]は不要"></td>
 </tr>
 <tr>
     <td>書名 title</td>
