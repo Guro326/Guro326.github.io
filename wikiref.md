@@ -35,7 +35,12 @@
 <th colspan="2">書籍</th>
 </tr>
 <tr>
-<td class="first_input">著者名</td><td><input type="text" name="author"></td>
+<td class="first_input">著者名 author</td>
+<td><input type="text" name="author"></td>
+</tr>
+<tr>
+<td class="first_input">著者名リンク authorlink<br/><span style="font-size: 50%”>※著者名にリンク[[]]するときにはこちらにも記入</span></td>
+<td><input type="text" name="authorlink"></td>
 </tr>
 <tr>
 <td>書名</td><td><input type="text" name="title"><span class="need title">※</span></td>
