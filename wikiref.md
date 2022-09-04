@@ -51,7 +51,7 @@
     <td><input type="text" name="publisher" placeholder="出版社名、団体名など"><span class="need publisher">※</span></td>
 </tr>
 <tr>
-    <td>
+    <td>発行年月日
     <input type="radio" name="yearInput" value="#directInput" id="direct" onclick="inputSelect('#directInput','#calenderInput','#directLabel','#calenderLabel')" class="yy_direct" checked="checked">
     <label for="direct" id="directLabel">日付を直接入力</label>
     </td>
