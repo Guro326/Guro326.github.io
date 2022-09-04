@@ -290,6 +290,7 @@ function ref_book() {
 	var $reftag = [
 		"<ref>{{Cite book|和書|",
 		"author=" + $("#ref_book>form>table>tbody>tr>td>input[name='author']").val(),
+		" |authorlink=" + $("#ref_book>form>table>tbody>tr>td>input[name='author_link']").val(),
 		" |title=" + $("#ref_book>form>table>tbody>tr>td>input[name='title']").val(),
 		" |publisher=" + $("#ref_book>form>table>tbody>tr>td>input[name='publisher']").val(),
 		" |date=" + $date,
