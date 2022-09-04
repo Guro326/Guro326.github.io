@@ -39,14 +39,15 @@
 <td><input type="text" name="author"></td>
 </tr>
 <tr>
-<td class="first_input">著者名リンク authorlink<br/><span style="font-size: 50%”>※著者名にリンク[[]]するときにはこちらにも記入</span></td>
+<td class="first_input">著者名リンク authorlink<br/>※著者名に[[リンク]]するときにはこちらに<u>も</u>記入</td>
 <td><input type="text" name="authorlink"></td>
 </tr>
 <tr>
-<td>書名</td><td><input type="text" name="title"><span class="need title">※</span></td>
+<td>書名 title</td><td><input type="text" name="title"><span class="need title">※</span></td>
 </tr>
 <tr>
-<td>発行者</td><td><input type="text" name="publisher" placeholder="出版社名、団体名など"><span class="need publisher">※</span></td>
+<td>発行者 publisher</td>
+<td><input type="text" name="publisher" placeholder="出版社名、団体名など"><span class="need publisher">※</span></td>
 </tr>
 <tr>
 <td>
