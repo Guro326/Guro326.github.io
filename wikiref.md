@@ -33,7 +33,7 @@
 <table class="ref_input">
 <tr>
 <th colspan="2">書籍（Cite book| 和書）<br/>
-	{ {<a href="https://ja.wikipedia.org/wiki/Template:Cite_book" target="_new">Cite book</a>} }</th>
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_book" target="_new">Cite book</a>&#x7b;&#x7b;</th>
 </tr>
 <tr>
     <td class="first_input">著者名 author</td>
@@ -87,7 +87,7 @@
 <table class="ref_input">
 <tr>
 <th colspan="2">Web出典（Cite web）<br/>
-	{ {<a href="https://ja.wikipedia.org/wiki/Template:Cite_web" target="_new">Cite web</a>} }</th>
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web" target="_new">Cite web</a>&#x7b;&#x7b;</th>
 </tr>
 <tr>
 </tr>
@@ -116,7 +116,7 @@
 <table class="ref_input">
 <tr>
 <th colspan="2">Web出典（Archiveを含める場合）<br/>
-	{ {<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%95%E3%82%8C%E3%81%9F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E5%A0%B4%E5%90%88" target="_new">Cite web</a>} }</th>
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%95%E3%82%8C%E3%81%9F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E5%A0%B4%E5%90%88" target="_new">Cite web</a>&#x7b;&#x7b;</th>
 </tr>
 <tr>
 <td class="first_input">アドレス</td><td><input type="text" name="url"><span class="need address">※</span></td>
@@ -146,7 +146,7 @@
 <table class="ref_input">
 <tr>
 <th colspan="2">pdf出典（Cite web format=PDF）<br/>
-	{ {<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#PDF%E3%81%AE%E5%A0%B4%E5%90%88" target="_new">Cite web</a>} }</th>
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#PDF%E3%81%AE%E5%A0%B4%E5%90%88" target="_new">Cite web</a>&#x7b;&#x7b;</th>
 </tr>
 <tr>
 </tr>
@@ -175,7 +175,7 @@
 <table class="ref_input">
 <tr>
 <th colspan="2">新聞（Cite news |和書）<br/>
-	{ {<a href="https://ja.wikipedia.org/wiki/Template:Cite_news" target="_new">Cite news</a>} }</th>
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_news" target="_new">Cite news</a>&#x7b;&#x7b;</th>
 </tr>
 <tr>
 <td class="first_input">記事題名</td><td><input type="text" name="title"><span class="need title">※</span></td>
@@ -209,7 +209,7 @@
 <table class="ref_input">
 <tr>
 <th colspan="2">学術雑誌の論文（Cite journal |和書）<br/>
-	{ {<a href="https://ja.wikipedia.org/wiki/Template:Cite_journal" target="_new">Cite journal</a>} }</th>
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_journal" target="_new">Cite journal</a>&#x7b;&#x7b;</th>
 </tr>
 <tr>
 <td class="first_input">誌名</td><td><input type="text" name="journal"><span class="need journal">※</span></td>
