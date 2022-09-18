@@ -33,7 +33,7 @@
 <table class="ref_input">
 <tr>
 <th colspan="2">書籍（Cite book| 和書）<br/>
-	{ {<a href="https://ja.wikipedia.org/wiki/Template:Cite_book" target="_new">Cite book</a>} }</th>
+	{ { <a href="https://ja.wikipedia.org/wiki/Template:Cite_book" target="_new">Cite book</a> } } </th>
 </tr>
 <tr>
     <td class="first_input">著者名 author</td>
@@ -87,7 +87,7 @@
 <table class="ref_input">
 <tr>
 <th colspan="2">Web出典（Cite web）<br/>
-	{{<a href="https://ja.wikipedia.org/wiki/Template:Cite_web" target="_new">Cite web</a>}}</th>
+	{ {<a href="https://ja.wikipedia.org/wiki/Template:Cite_web" target="_new">Cite web</a>} }</th>
 </tr>
 <tr>
 </tr>
