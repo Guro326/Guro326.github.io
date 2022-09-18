@@ -32,7 +32,8 @@
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">書籍（Cite book | 和書）<br/> https://ja.wikipedia.org/wiki/Template:Cite_book </th>
+<th colspan="2">書籍（Cite book | 和書）<br/>
+	<a href="https://ja.wikipedia.org/wiki/Template:Cite_book">https://ja.wikipedia.org/wiki/Template:Cite_book</a></th>
 </tr>
 <tr>
     <td class="first_input">著者名 author</td>
@@ -246,6 +247,6 @@
 
 初版を作った人 special thanks to：[利用者:Marine-Blue](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Marine-Blue)
 
-original site: (http://mb1223jawp.php.xdomain.jp/wptown/reference.html)
+[original site](http://mb1223jawp.php.xdomain.jp/wptown/reference.html)
 
 作った人 : [利用者:Latenscurtis](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Latenscurtis)
