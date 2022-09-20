@@ -44,15 +44,27 @@
     <td><input type="text" name="author_link" placeholder="[[]]は不要"></td>
 </tr>
 <tr>
-    <td>書名 title</td>
+    <td>編者 editor<br/></td>
+    <td><input type="text" name="editor" placeholder="末尾に「編」「編集」はつけない。リンクは[[]]を用いる"></td>
+</tr>
+<tr>
+    <td>『書名』 title</td>
     <td><input type="text" name="title"><span class="need title">※</span></td>
+</tr>
+<tr>
+    <td>版 edition</td>
+    <td><input type="text" name="edition" placeholder="初版、第2版など"></td>
+</tr>
+<tr>
+    <td>「節・章」 chapter</td>
+    <td><input type="text" name="chapter" placeholder="必要なければ空欄"></td>
 </tr>
 <tr>
     <td>発行者 publisher</td>
     <td><input type="text" name="publisher" placeholder="出版社名、団体名など"><span class="need publisher">※</span></td>
 </tr>
 <tr>
-    <td>発行年月日
+    <td>発行年月日 date
     <input type="radio" name="yearInput" value="#directInput" id="direct" onclick="inputSelect('#directInput','#calenderInput','#directLabel','#calenderLabel')" class="yy_direct" checked="checked">
     <label for="direct" id="directLabel">日付を直接入力</label>
     </td>
@@ -67,7 +79,7 @@
     <td><input type="text" name="yearDirect" id="directInput" class="yearInput" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span class="directInputNote">（月日は省略可）</span><input type="date" name="yearCalender" id="calenderInput" class="yearInput"></td>
 </tr>
 <tr>
-    <td>ページ番号</td>
+    <td>ページ番号 pages</td>
     <td><input type="text" name="page" onchange="page_replace()" placeholder="記入例：12、12-13"></td>
 </tr>
 <tr>
