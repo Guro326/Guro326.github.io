@@ -1,4 +1,21 @@
 
+<style type="text/css">
+label {
+	cursor: pointer;
+}
+
+.ref_input {
+	width: 550px;
+	vertical-align: top;
+}
+
+.ref_type {
+	height: 250px;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+</style>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="ref_tag.js"></script>
 
