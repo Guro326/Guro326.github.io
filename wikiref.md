@@ -18,7 +18,7 @@ label {
 }
 
 .ref_type {
-	height: 550px;
+	##height: 550px;
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
