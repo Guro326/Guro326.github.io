@@ -10,7 +10,7 @@ label {
 }
 
 .ref_type {
-	height: 250px;
+	height: 550px;
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
