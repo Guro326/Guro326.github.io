@@ -1,11 +1,19 @@
 
 <style type="text/css">
+.book_date {
+	height: 50px;
+}
+
+#direct,#calender {
+	display: none;
+}
+
 label {
 	cursor: pointer;
 }
 
 .ref_input {
-	width: 550px;
+	width: 700px;
 	vertical-align: top;
 }
 
@@ -14,13 +22,47 @@ label {
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
+
+.first_input {
+	width: 16em;
+}
+
+.need {
+	color: #F00;
+	font-size: 90%;
+	font-weight: bold;
+	padding-left: 0.2em;
+}
+
+.np_yy {
+	width: 4em;
+	text-align: right;
+}
+
+.np_mmdd {
+	width: 2.5em;
+	text-align: right;
+}
+
+.button {
+	text-align: center;
+}
+
+.opiton_hide {
+	visibility: hidden;
+}
+
+.option_visible {
+	visibility: visible;
+}
+
 </style>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="ref_tag.js"></script>
 
 
-## ウィキペディア編集イベント向け | 出典タグを生成する
+# ウィキペディア編集イベント向け | 出典タグを生成する
 
 
 <div id="type">
@@ -62,7 +104,7 @@ label {
 </tr>
 <tr>
     <td>編者 editor<br/></td>
-    <td><input type="text" name="editor" placeholder="末尾に「編」「編集」はつけない。リンクは[[]]を用いる"></td>
+    <td><input type="text" name="editor" placeholder="「編」「編集」はつけない。リンクは[[]]で"></td>
 </tr>
 <tr>
     <td>『書名』 title</td>
