@@ -115,36 +115,38 @@ label {
     <td><input type="text" name="edition" placeholder="初版、第2版など"></td>
 </tr>
 <tr>
+    <td>巻 volume</td>
+    <td><input type="text" name="volume" placeholder="1、下、3、など。文庫や新書の場合はその番号。"></td>
+</tr>
+<tr>
     <td>「節・章」 chapter</td>
     <td><input type="text" name="chapter" placeholder="必要なければ空欄"></td>
 </tr>
 <tr>
-    <td>発行者 publisher</td>
+    <td>出版者 publisher</td>
     <td><input type="text" name="publisher" placeholder="出版社名、団体名など"><span class="need publisher">※</span></td>
 </tr>
 <tr>
-    <td>発行年月日 date
-    <input type="radio" name="yearInput" value="#directInput" id="direct" onclick="inputSelect('#directInput','#calenderInput','#directLabel','#calenderLabel')" class="yy_direct" checked="checked">
-    <label for="direct" id="directLabel">日付を直接入力</label>
-    </td>
-    <td>
-    <input type="radio" name="yearInput" value="#calenderInput" id="calender" onclick="inputSelect('#calenderInput','#directInput','#calenderLabel','#directLabel')" class="yy_calender">
-    <label for="calender" id="calenderLabel">日付をカレンダーから入力</label>
-    （どちらか選択）
-    </td>
-</tr>
-<tr>
-    <td class="book_date">&nbsp;</td>
-    <td><input type="text" name="yearDirect" id="directInput" class="yearInput" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span class="directInputNote">（月日は省略可）</span><input type="date" name="yearCalender" id="calenderInput" class="yearInput"></td>
+    <td>出版年月 date</td>
+    <td><input type="text" name="yearDirect" id="directInput" class="yearInput" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span class="directInputNote">（月・日は省略可）</span></td>
 </tr>
 <tr>
     <td>ページ番号 pages</td>
-    <td><input type="text" name="page" onchange="page_replace()" placeholder="記入例：12、12-13"></td>
+    <td><input type="text" name="pages" onchange="page_replace()" placeholder="記入例：12、12-13"></td>
 </tr>
 <tr>
     <td>ISBN</td>
     <td><input type="text" name="isbn" placeholder="ハイフンは省略可" onchange="isbn_replace()"></td>
 </tr>
+<tr>
+    <td>id</td>
+    <td><input type="text" name="id" placeholder="" ></td>
+</tr>
+<tr>
+    <td>ref</td>
+    <td><input type="text" name="ref" placeholder=""></td>
+</tr>
+	
 <tr>
    <td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_book()"><input type="reset" value="入力内容を消す"></td>
 </tr>
