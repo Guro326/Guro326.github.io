@@ -83,7 +83,7 @@ label {
 	
 </p>
 
-なるべく欄は埋めましょう。特に、<span class="need">※</span>のある欄は必ず入力してください。
+<span class="need">※</span>のある欄は必ず入力してください。
 
 </div>
 
