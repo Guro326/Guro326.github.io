@@ -128,7 +128,7 @@ label {
 </tr>
 <tr>
     <td>出版年月 date</td>
-    <td><input type="text" name="yearDirect" id="directInput" class="yearInput" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span class="directInputNote">（月・日は省略可）</span></td>
+    <td><input type="text" name="yearDirect" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span>（月・日は省略可）</span></td>
 </tr>
 <tr>
     <td>ページ番号 pages</td>
