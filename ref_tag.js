@@ -118,6 +118,7 @@ function ref_web() {
 	$("#result").val($reftag);
 }
 
+
 // PDF出典
 function ref_pdf() {
 	$url         = $("#ref_pdf>form>table>tbody>tr>td>input[name='url']").val();
@@ -315,11 +316,11 @@ function ref_book() {
 	
 	var $jpno  = $("#ref_book>form>table>tbody>tr>td>input[name='jpno']").val();
 	if($checkEmpty($jpno) === 0) {
-		$jpno = "{{全国書誌番号|" + $jpno + "}}";
+		$jpno = "{{全国書誌番号|" + $jpno + "}} ";
 	}
 	var $ndljp = $("#ref_book>form>table>tbody>tr>td>input[name='ndljp']").val();
 	if($checkEmpty($ndljp) === 0) {
-		$ndljp = "{{NDLJP|" + $ndljp + "}}";
+		$ndljp = "{{NDLJP|" + $ndljp + "}} ";
 	}
 	var $idtag = "";
 	if($checkEmpty($jpno) === 0 || $checkEmpty($ndljp) === 0){
@@ -375,9 +376,37 @@ function ref_newspaper() {
 		$("#ref_newspaper>form>table>tbody>tr>td>span.date").text("※");
 	}
 	
+	var $news_source = "";
+	
+	//Web媒体で入力された場合にのみ、アーカイブを記載
+	$archiveUrl  = $("#ref_newspaper>form>table>tbody>tr>td>input[name='archiveurl']").val();
+	$archiveDate = $("#ref＿newspaper>form>table>tbody>tr>td>input[name='archivedate']").val();
+	
+	if($checkEmpty($archiveUrl) === 0){
+		// Internet Archive の場合は自動で日時を取得
+		if($archiveUrl.indexOf("web.archive.org") != -1) {
+			$archiveDate = $archiveUrl.match(/\/web\/[0-9]+\.?[0-9]*/g);
+			$archiveDate = $archiveDate[0].slice(5,13);
+			
+			$archiveDate = insertStr($archiveDate, 4, "-");
+			$archiveDate = insertStr($archiveDate, 7, "-");
+		}
+		// それ以外は任意で入力
+		else {
+			$archiveDate = $("#ref_newspaper>form>table>tbody>tr>td>input[name='archivedate']").val();
+		}
+		
+		$news_source = " |archive-url=" + $archiveUrl +
+		               " |archive-date=" + $archiveDate;
+	}
+	
+	
 	// Web媒体と紙媒体で処理分け
 	if($("#ref_newspaper>form>table>tbody>tr>td>input[name='url']").val() != "") {
-		$news_source = " |url=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='url']").val() + " |accessdate=" + $accessdate;
+		$news_source = " |url=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='url']").val() +
+		               " |accessdate=" + 
+		               $accessdate + 
+		               $news_source;
 	}
 	else {
 		$news_source = " |page=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='page']").val();
@@ -392,9 +421,9 @@ function ref_newspaper() {
 		"<ref>{{Cite news",
 		"|title=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='title']").val(),
 		" |newspaper=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='newspaper']").val(),
-		$news_source,
+	$tagged("author", $("#ref_newspaper>form>table>tbody>tr>td>input[name='author']").val()),
 		$date,
-		" |author=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='author']").val(),
+		$news_source,
 		"}}</ref>"
 	].join("");
 	
