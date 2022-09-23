@@ -350,8 +350,6 @@ input[type="text"] {
 <textarea cols="50" rows="5" id="result" onfocus="this.select()"></textarea>
 </p>
 
-初版を作った人 special thanks to：[利用者:Marine-Blue](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Marine-Blue)
-
-[original site](http://mb1223jawp.php.xdomain.jp/wptown/reference.html)
+初版を作った人 special thanks to：[利用者:Marine-Blue](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Marine-Blue)　[original site](http://mb1223jawp.php.xdomain.jp/wptown/reference.html)
 
 作った人 : [利用者:Latenscurtis](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Latenscurtis)
