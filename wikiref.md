@@ -79,7 +79,7 @@ input[type="text"] {
 	
 <input type="radio" name="type" onClick="type_change('#ref_pdf')" id="pdf" value="#ref_pdf"><label for="pdf">PDF出典</label><br/>
 	
-<input type="radio" name="type" onClick="type_change('#ref_newspaper')" id="newspaper" value="#ref_newspaper"><label for="newspaper">新聞</label><br/>
+<input type="radio" name="type" onClick="type_change('#ref_newspaper')" id="newspaper" value="#ref_newspaper"><label for="newspaper">新聞・ニュースサイト</label><br/>
 	
 <input type="radio" name="type" onClick="type_change('#ref_journal')" id="journal" value="#ref_journal"><label for="journal">学術雑誌の論文</label><br/>
 	
@@ -182,6 +182,9 @@ input[type="text"] {
 </table>
 </form>
 </div>
+
+
+
 
 <div id="ref_web" class="ref_type">
 <form>
@@ -305,29 +308,43 @@ input[type="text"] {
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">新聞（Cite news |和書）<br/>
+<th colspan="2">新聞・ニュースサイト（Cite news |和書）<br />
 	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_news" target="_new">Cite news</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
-<td class="first_input">記事題名</td><td><input type="text" name="title"><span class="need title">※</span></td>
+    <td class="first_input">記事の見出し title</td>
+    <td><input type="text" name="title" /><span class="need title">※</span></td>
 </tr>
 <tr>
-<td>新聞社名</td><td><input type="text" name="newspaper"><span class="need news">※</span></td>
+    <td>新聞社名 newspaper</td>
+    <td><input type="text" name="newspaper" /><span class="need news">※</span></td>
 </tr>
 <tr>
-<td>著者名</td><td><input type="text" name="author"></td>
+    <td>記事の日付 date</td>
+    <td><input type="date" name="date" /><span class="need date">※</span></td>
 </tr>
 <tr>
-<td>アドレス</td><td><input type="text" name="url" placeholder="ネット記事なら必須※"></td>
+    <td>面(ページ番号) page</td>
+    <td><input type="text" name="page" placeholder="紙媒体の場合こちら" /></td>
 </tr>
 <tr>
-<td>日付</td><td><input type="date" name="date"><span class="need date">※</span></td>
+    <td>アドレス url</td>
+    <td><input type="text" name="url" placeholder="ネット記事なら必須※" /></td>
 </tr>
 <tr>
-<td>ページ番号</td><td><input type="text" name="page" placeholder="紙媒体の場合こちら"></td>
+    <td>閲覧日 access-date</td>
+    <td>（自動セット）</td>
 </tr>
 <tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_newspaper()"><input type="reset" value="入力内容を消す"></td>
+    <td>アーカイブURL archive-url</td>
+    <td><input type="text" name="archiveurl" /></td>
+</tr>
+<tr>
+    <td>アーカイブの日付 archive-date</td>
+    <td><input type="date" name="archivedate" /><br />（web.archive.org 以外は手入力が必要）</td>
+</tr>
+<tr>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_newspaper()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
