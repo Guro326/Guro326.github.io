@@ -14,7 +14,7 @@
 
 // 2022-09-23 @Guro326
 //            適宜カスタマイズ
-
+//            書籍 日付入力のカレンダーはやめる
 
 // ページ読み込み時に非選択フォームを非表示にする
 jQuery(document).ready(function($){
@@ -45,9 +45,13 @@ var mm = ('0' + m).slice(-2);
 var dd = ('0' + d).slice(-2);
 var $accessdate = y + "-" + mm + "-" + dd;
 
+
 // 必須入力項目の空白チェック
 function $checkEmpty($field) {
 	if($field === "") {
+		$check = 1;
+	}
+	else if($field === undefined) {
 		$check = 1;
 	}
 	else {
@@ -309,21 +313,35 @@ function ref_book() {
 	*/
 	var $date = $("#ref_book>form>table>tbody>tr>td>input[name='yearDirect']").val();
 	
+	var $jpno  = $("#ref_book>form>table>tbody>tr>td>input[name='jpno']").val();
+	if($checkEmpty($jpno) === 0) {
+		$jpno = "{{全国書誌番号|" + $jpno + "}}";
+	}
+	var $ndljp = $("#ref_book>form>table>tbody>tr>td>input[name='ndljp']").val();
+	if($checkEmpty($ndljp) === 0) {
+		$ndljp = "{{NDLJP|" + $ndljp + "}}";
+	}
+	var $idtag = "";
+	if($checkEmpty($jpno) === 0 || $checkEmpty($ndljp) === 0){
+		$idtag = " |ID=" + $jpno + $ndljp;
+	}
+	
 	var $reftag = [
 		"<ref>{{Cite book|和書|",
 		"author=" + $("#ref_book>form>table>tbody>tr>td>input[name='author']").val(),
 	$tagged("authorlink",  $("#ref_book>form>table>tbody>tr>td>input[name='author_link']").val()),
 	$tagged("editor",  $("#ref_book>form>table>tbody>tr>td>input[name='editor']").val()),
-		" |title=" + $("#ref_book>form>table>tbody>tr>td>input[name='title']").val(),
+		" |title=" +   $("#ref_book>form>table>tbody>tr>td>input[name='title']").val(),
 	$tagged("edition", $("#ref_book>form>table>tbody>tr>td>input[name='edition']").val()),
 	$tagged("series",  $("#ref_book>form>table>tbody>tr>td>input[name='series']").val()),
 	$tagged("volume",  $("#ref_book>form>table>tbody>tr>td>input[name='volume']").val()),
 		" |date=" + $date,
 		" |publisher=" + $("#ref_book>form>table>tbody>tr>td>input[name='publisher']").val(),
-		" |pages=" + $("#ref_book>form>table>tbody>tr>td>input[name='pages']").val(),
-		" |isbn=" + $("#ref_book>form>table>tbody>tr>td>input[name='isbn']").val(),
-		" |id=" + $("#ref_book>form>table>tbody>tr>td>input[name='id']").val(),
-		" |ref=" + $("#ref_book>form>table>tbody>tr>td>input[name='ref']").val(),
+		" |pages=" +   $("#ref_book>form>table>tbody>tr>td>input[name='pages']").val(),
+		" |isbn=" +    $("#ref_book>form>table>tbody>tr>td>input[name='isbn']").val(),
+	$tagged("NCID",    $("#ref_book>form>table>tbody>tr>td>input[name='ncid']").val()),
+		$idtag,
+	$tagged("ref",     $("#ref_book>form>table>tbody>tr>td>input[name='ref']").val()),
 		"}}</ref>"
 	].join("");
 	
