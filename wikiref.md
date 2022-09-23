@@ -119,7 +119,7 @@ input[type="text"] {
     <td><input type="text" name="edition" placeholder="初版、第2版など" /></td>
 </tr>
 <tr>
-    <td>シリーズ series</td>
+    <td>〈シリーズ〉 series</td>
     <td><input type="text" name="series" placeholder="○○新書なども" /></td>
 </tr>
 <!--tr>
@@ -158,20 +158,59 @@ input[type="text"] {
     <td><input type="text" name="isbn" placeholder="ハイフンは省略可" onchange="isbn_replace()" /></td>
 </tr>
 <tr>
-    <td>id</td>
-    <td><input type="text" name="id" placeholder="" /></td>
+    <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:NCID" target="_new">NCID</a>&#x7d;&#x7d;<br />
+    <a href="https://ci.nii.ac.jp/books/" target="_new">CiNii</a>の書誌情報の番号</td>
+    <td><input type="text" name="ncid" placeholder="例 BB28228345" /></td>
+</tr>
+<tr>
+    <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:%E5%85%A8%E5%9B%BD%E6%9B%B8%E8%AA%8C%E7%95%AA%E5%8F%B7" target="_new">全国書誌番号</a>&#x7d;&#x7d;<br />
+    <a href="https://iss.ndl.go.jp/" target="_new">国立国会図書館サーチ</a>の全国書誌番号（JP番号）</td>
+    <td><input type="text" name="jpno" placeholder="例 23539726" /></td>
+</tr>
+<tr>
+    <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:%E8%BF%91%E4%BB%A3%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%BC" target="_new">NDLJP</a>&#x7d;&#x7d;<br />
+    <a href="https://dl.ndl.go.jp/" target="_new">国立国会図書館デジタルコレクション</a>URLに表記されている識別子/コマ番号</td>
+    <td><input type="text" name="ndljp" placeholder="例 888725/3" /></td>
 </tr>
 <tr>
     <td>ref</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
-	
 <tr>
    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_book()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
 </div>
+
+<div id="ref_web" class="ref_type">
+<form>
+<table class="ref_input">
+<tr>
+<th colspan="2">Web出典（Cite web）<br />
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web" target="_new">Cite web</a>&#x7d;&#x7d;</th>
+</tr>
+<tr>
+</tr>
+<tr>
+<td class="first_input">アドレス</td><td><input type="text" name="url" /><span class="need address">※</span></td>
+</tr>
+<tr>
+<td>タイトル</td><td><input type="text" name="title" /><span class="need title">※</span></td>
+</tr>
+<tr>
+<td>発行者</td><td><input type="text" name="publisher" placeholder="企業・団体名など" /></td>
+</tr>
+<tr>
+<td>日付</td><td><input type="date" name="date" /></td>
+</tr>
+<tr>
+<td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_web()" /><input type="reset" value="入力内容を消す" /></td>
+</tr>
+</table>
+</form>
+</div>
+
 
 
 <div id="ref_web" class="ref_type">
