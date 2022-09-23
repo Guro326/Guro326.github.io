@@ -12,6 +12,10 @@
 // 2019-11-29 書籍出典の出力パラメータをyearからdateに変更
 // 2021-07-09 必須入力の警告、書式不備の警告、日付入力をカレンダーに、日付手入力を半角に強制変換
 
+// 2022-09-23 @Guro326
+//            適宜カスタマイズ
+
+
 // ページ読み込み時に非選択フォームを非表示にする
 jQuery(document).ready(function($){
 	$(".ref_type").css('display', 'none');
@@ -51,6 +55,22 @@ function $checkEmpty($field) {
 	}
 	return $check;
 }
+
+
+// 項目の空白判定と、タグ化
+// 入力した場合のみタグをおこす
+function $tagged($tagname, $fieldvalue) {
+	if($fieldvalue === undefined) {
+		return "";
+	}
+	else if($fieldvalue === "") {
+		return "";
+	}
+	else {
+		return " |" + $tagname + "=" + $fieldvalue;
+	}
+}
+
 
 // Web出典
 function ref_web() {
@@ -242,11 +262,11 @@ function date_replace() {
 
 // ページの書式整形
 function page_replace() {
-	$str = $("#ref_book>form>table>tbody>tr>td>input[name='page']").val();
+	$str = $("#ref_book>form>table>tbody>tr>td>input[name='pages']").val();
 	$str = $str.replace(/[０-９]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
     }).replace(/―|—|－|–|－|ー/g,'-').replace(/[^0-9\-]/g, '');
-	$("#ref_book>form>table>tbody>tr>td>input[name='page']").val($str);
+	$("#ref_book>form>table>tbody>tr>td>input[name='pages']").val($str);
 }
 
 // ISBNの書式整形
@@ -279,23 +299,31 @@ function ref_book() {
 		$("#ref_book>form>table>tbody>tr>td>span.publisher").text("※");
 	}
 	
-	// 選択されていた形式の入力フォームからのみ値を取得する
+	/* 選択されていた形式の入力フォームからのみ値を取得する
 	if($('input[name=yearInput]:checked').val() === "#directInput") {
 		$date = $("#ref_book>form>table>tbody>tr>td>input[name='yearDirect']").val();
 	}
 	else if($('input[name=yearInput]:checked').val() === "#calenderInput") {
 		$date = $("#ref_book>form>table>tbody>tr>td>input[name='yearCalender']").val();
 	}
+	*/
+	var $date = $("#ref_book>form>table>tbody>tr>td>input[name='yearDirect']").val();
 	
 	var $reftag = [
 		"<ref>{{Cite book|和書|",
 		"author=" + $("#ref_book>form>table>tbody>tr>td>input[name='author']").val(),
-		" |authorlink=" + $("#ref_book>form>table>tbody>tr>td>input[name='author_link']").val(),
+	$tagged("authorlink",  $("#ref_book>form>table>tbody>tr>td>input[name='author_link']").val()),
+	$tagged("editor",  $("#ref_book>form>table>tbody>tr>td>input[name='editor']").val()),
 		" |title=" + $("#ref_book>form>table>tbody>tr>td>input[name='title']").val(),
-		" |publisher=" + $("#ref_book>form>table>tbody>tr>td>input[name='publisher']").val(),
+	$tagged("edition", $("#ref_book>form>table>tbody>tr>td>input[name='edition']").val()),
+	$tagged("series",  $("#ref_book>form>table>tbody>tr>td>input[name='series']").val()),
+	$tagged("volume",  $("#ref_book>form>table>tbody>tr>td>input[name='volume']").val()),
 		" |date=" + $date,
-		" |page=" + $("#ref_book>form>table>tbody>tr>td>input[name='page']").val(),
+		" |publisher=" + $("#ref_book>form>table>tbody>tr>td>input[name='publisher']").val(),
+		" |pages=" + $("#ref_book>form>table>tbody>tr>td>input[name='pages']").val(),
 		" |isbn=" + $("#ref_book>form>table>tbody>tr>td>input[name='isbn']").val(),
+		" |id=" + $("#ref_book>form>table>tbody>tr>td>input[name='id']").val(),
+		" |ref=" + $("#ref_book>form>table>tbody>tr>td>input[name='ref']").val(),
 		"}}</ref>"
 	].join("");
 	
