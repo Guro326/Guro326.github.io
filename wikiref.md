@@ -161,7 +161,7 @@ input[type="text"] {
     <td><input type="text" name="isbn" placeholder="ハイフンは省略可" onchange="isbn_replace()" /></td>
 </tr>
 <tr>
-    <td colspan="2">ISBNがない書籍は以下のいずれかを入力する</td>
+    <td colspan="2">ISBNがない書籍は以下のいずれかを入力するとよい</td>
 </tr>
 <tr>
     <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:NCID" target="_new">NCID</a>&#x7d;&#x7d;<br />
@@ -205,16 +205,28 @@ input[type="text"] {
 <tr>
 </tr>
 <tr>
-<td class="first_input">アドレス</td><td><input type="text" name="url" /><span class="need address">※</span></td>
+    <td class="first_input">アドレス url</td>
+    <td><input type="text" name="url" /><span class="need address">※</span></td>
 </tr>
 <tr>
-<td>タイトル</td><td><input type="text" name="title" /><span class="need title">※</span></td>
+    <td>タイトル title</td>
+    <td><input type="text" name="title" /><span class="need title">※</span></td>
 </tr>
 <tr>
-<td>発行者</td><td><input type="text" name="publisher" placeholder="企業・団体名など" /></td>
+    <td>発行者 publisher</td>
+    <td><input type="text" name="publisher" placeholder="企業・団体名など" /></td>
 </tr>
 <tr>
-<td>日付</td><td><input type="date" name="date" /></td>
+    <td>発行日付 date</td>
+    <td><input type="date" name="date" /></td>
+</tr>
+<tr>
+    <td>閲覧日 access-date</td>
+    <td>（自動セット）</td>
+</tr>
+<tr>
+    <td>ref</td>
+    <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
 <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_web()" /><input type="reset" value="入力内容を消す" /></td>
@@ -225,92 +237,80 @@ input[type="text"] {
 
 
 
-<div id="ref_web" class="ref_type">
-<form>
-<table class="ref_input">
-<tr>
-<th colspan="2">Web出典（Cite web）<br/>
-	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web" target="_new">Cite web</a>&#x7d;&#x7d;</th>
-</tr>
-<tr>
-</tr>
-<tr>
-<td class="first_input">アドレス</td><td><input type="text" name="url"><span class="need address">※</span></td>
-</tr>
-<tr>
-<td>タイトル</td><td><input type="text" name="title"><span class="need title">※</span></td>
-</tr>
-<tr>
-<td>発行者</td><td><input type="text" name="publisher" placeholder="企業・団体名など"></td>
-</tr>
-<tr>
-<td>日付</td><td><input type="date" name="date"></td>
-</tr>
-<tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_web()"><input type="reset" value="入力内容を消す"></td>
-</tr>
-</table>
-</form>
-</div>
-
 
 <div id="ref_archive" class="ref_type">
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">Web出典（Archiveを含める場合）<br/>
+<th colspan="2">Web出典（Archiveを含める場合）<br />
 	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%95%E3%82%8C%E3%81%9F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E5%A0%B4%E5%90%88" target="_new">Cite web</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
-<td class="first_input">アドレス</td><td><input type="text" name="url"><span class="need address">※</span></td>
+    <td class="first_input">アドレス url</td>
+    <td><input type="text" name="url" /><span class="need address">※</span></td>
 </tr>
 <tr>
-<td>タイトル</td><td><input type="text" name="title"><span class="need title">※</span></td>
+    <td>タイトル title</td>
+    <td><input type="text" name="title" /><span class="need title">※</span></td>
 </tr>
 <tr>
-<td>発行者</td><td><input type="text" name="publisher" placeholder="企業・団体名など"></td>
+    <td>発行者 publisher</td>
+    <td><input type="text" name="publisher" placeholder="企業・団体名など" /></td>
 </tr>
 <tr>
-<td>アーカイブURL</td><td><input type="text" name="archive"><span class="need arcurl">※</span></td>
+    <td>アーカイブURL archiveurl</td>
+    <td><input type="text" name="archive" /><span class="need arcurl">※</span></td>
 </tr>
 <tr>
-<td>アーカイブの日付</td><td><input type="date" name="archivedate"><span class="need arcdate"></span><br>（web.archive.org 以外は手入力が必要）</td>
+    <td>アーカイブの日付 archivedate</td>
+    <td><input type="date" name="archivedate" /><span class="need arcdate"></span><br />（web.archive.org 以外は手入力が必要）</td>
 </tr>
 <tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_archive()"><input type="reset" value="入力内容を消す"></td>
+    <td>ref</td>
+    <td><input type="text" name="ref" placeholder="" /></td>
+</tr>
+<tr>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_archive()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
 </div>
+
+
 
 
 <div id="ref_pdf" class="ref_type">
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">pdf出典（Cite web format=PDF）<br/>
+<th colspan="2">pdf出典（Cite web format=PDF）<br />
 	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#PDF%E3%81%AE%E5%A0%B4%E5%90%88" target="_new">Cite web</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
 </tr>
 <tr>
-<td class="first_input">アドレス</td><td><input type="text" name="url"><span class="need address">※</span></td>
+    <td class="first_input">アドレス url</td>
+    <td><input type="text" name="url" /><span class="need address">※</span></td>
 </tr>
 <tr>
-<td>タイトル</td><td><input type="text" name="title"><span class="need title">※</span></td>
+    <td>タイトル title</td>
+    <td><input type="text" name="title" /><span class="need title">※</span></td>
 </tr>
 <tr>
-<td>発行者</td><td><input type="text" name="publisher" placeholder="企業・団体名など"></td>
+    <td>発行者 publisher</td>
+    <td><input type="text" name="publisher" placeholder="企業・団体名など" /></td>
 </tr>
 <tr>
-<td>日付</td><td><input type="date" name="date"></td>
+    <td>日付 date</td>
+    <td><input type="date" name="date" /></td>
 </tr>
 <tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_pdf()"><input type="reset" value="入力内容を消す"></td>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_pdf()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
 </div>
+
 
 
 <div id="ref_newspaper" class="ref_type">
@@ -361,31 +361,103 @@ input[type="text"] {
 
 
 
-<div id="ref_journal" class="ref_type">
+<div id="ref_magazine" class="ref_type">
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">学術雑誌の論文（Cite journal |和書）<br/>
+<th colspan="2">雑誌の記事（Cite journal |和書）<br />
 	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_journal" target="_new">Cite journal</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
-<td class="first_input">誌名</td><td><input type="text" name="journal"><span class="need journal">※</span></td>
+    <td class="first_input">雑誌名 journal</td>
+    <td><input type="text" name="journal" /><span class="need journal">※</span></td>
 </tr>
 <tr>
-<td>論文名</td><td><input type="text" name="title"></td>
+    <td>記事のタイトル title</td>
+    <td><input type="text" name="title" /><span class="need title">※</span></td>
 </tr>
 <tr>
-<td>巻</td><td><input type="text" name="volume"></td>
+    <td>記事の著者 author</td>
+    <td><input type="text" name="author" /></td>
 </tr>
 <tr>
-<td>号</td><td><input type="text" name="issue"></td>
+    <td>出版社 publisher</td>
+    <td><input type="text" name="publisher" /></td>
 </tr>
 <tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onClick="ref_journal()"><input type="reset" value="入力内容を消す"></td>
+    <td>雑誌の発行年月日 date</td>
+    <td><input type="date" name="date" /></td>
+</tr>
+<tr>
+    <td>巻 volume</td>
+    <td><input type="text" name="volume" /></td>
+</tr>
+<tr>
+    <td>号 issue</td>
+    <td><input type="text" name="issue" /></td>
+</tr>
+<tr>
+    <td>ページ番号 pages</td>
+    <td><input type="text" name="pages" onchange="page_replace()" placeholder="記入例：12、12-13" /></td>
+</tr>
+<tr>
+    <td>id</td>
+    <td><input type="text" name="id" placeholder="" /></td>
+</tr>
+<tr>
+    <td>ref</td>
+    <td><input type="text" name="ref" placeholder="" /></td>
+</tr>
+<tr>
+<td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_magazine()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
 </div>
+
+
+
+
+<div id="ref_journal" class="ref_type">
+<form>
+<table class="ref_input">
+<tr>
+<th colspan="2">学術雑誌の論文（Cite journal |和書）<br />
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_journal" target="_new">Cite journal</a>&#x7d;&#x7d;</th>
+</tr>
+<tr>
+    <td class="first_input">誌名 journal</td>
+    <td><input type="text" name="journal" /><span class="need journal">※</span></td>
+</tr>
+<tr>
+    <td>論文名 title</td>
+    <td><input type="text" name="title" /></td>
+</tr>
+<tr>
+    <td>巻 volume</td>
+    <td><input type="text" name="volume" /></td>
+</tr>
+<tr>
+    <td>号 issue</td>
+    <td><input type="text" name="issue" /></td>
+</tr>
+<tr>
+    <td>id</td>
+    <td><input type="text" name="id" placeholder="" /></td>
+</tr>
+<tr>
+    <td>ref</td>
+    <td><input type="text" name="ref" placeholder="" /></td>
+</tr>
+<tr>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_journal()" /><input type="reset" value="入力内容を消す" /></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+
 <div id="ref_tweet" class="ref_type">
 <form>
 <table class="ref_input">
@@ -417,4 +489,4 @@ input[type="text"] {
 
 初版を作った人 special thanks to：[利用者:Marine-Blue](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Marine-Blue)　[original site](http://mb1223jawp.php.xdomain.jp/wptown/reference.html)
 
-作った人 : [利用者:Latenscurtis](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Latenscurtis)
+作った人 : [利用者:Latenscurtis](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Latenscurtis) {{ page.date }}
