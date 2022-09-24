@@ -24,7 +24,7 @@ label {
 }
 
 .first_input {
-	width: 12em;
+	width: 15em;
 }
 
 .need {
@@ -56,8 +56,15 @@ label {
 	visibility: visible;
 }
 
-input[type="text"] {
+input[type="text"]
+:not(#voliss) {
 	width: 15em;
+}
+
+.voliss {
+	size: 2em;
+	width: 2em;
+	text-align: right;
 }
 
 </style>
@@ -71,9 +78,11 @@ https://guro326.github.io/wikiref
 
 <div id="type">
 <p>
-<input type="radio" name="type" onclick="type_change('#ref_book')" id="book" value="#ref_book"  checked=""/><label for="book">書籍</label><br />
+<input type="radio" name="type" onclick="type_change('#ref_book')" id="book" value="#ref_book" checked="" /><label for="book">書籍</label><br />
 	
 <input type="radio" name="type" onclick="type_change('#ref_magazine')" id="magazine" value="#ref_magazine" /><label for="magazine">雑誌の記事</label><br />
+	
+<input type="radio" name="type" onclick="type_change('#ref_journal')" id="journal" value="#ref_journal" /><label for="journal">学術雑誌の論文</label><br />
 	
 <input type="radio" name="type" onclick="type_change('#ref_web')" id="web" value="#ref_web" /><label for="web">Web出典</label><br />
 	
@@ -82,8 +91,6 @@ https://guro326.github.io/wikiref
 <input type="radio" name="type" onclick="type_change('#ref_pdf')" id="pdf" value="#ref_pdf" /><label for="pdf">PDF出典</label><br />
 	
 <input type="radio" name="type" onclick="type_change('#ref_newspaper')" id="newspaper" value="#ref_newspaper" /><label for="newspaper">新聞・ニュースサイト</label><br />
-	
-<input type="radio" name="type" onclick="type_change('#ref_journal')" id="journal" value="#ref_journal" /><label for="journal">学術雑誌の論文</label><br />
 	
 <input type="radio" name="type" onclick="type_change('#ref_tweet')" id="tweet" value="#ref_tweet" class="opiton_hide" disabled="" /><label for="tweet" class="opiton_hide">Twitter</label><br />
 
