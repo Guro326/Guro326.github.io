@@ -67,7 +67,7 @@ input[type="text"] {
 
 
 # ウィキペディア編集イベント向け | 出典タグを生成する
-
+https://guro326.github.io/wikiref
 
 <div id="type">
 <p>
@@ -353,11 +353,11 @@ input[type="text"] {
     <td><input type="date" name="archivedate" /><br />（web.archive.org 以外は手入力が必要）</td>
 </tr>
 <tr>
-    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_newspaper()" /><input type="reset" value="入力内容を消す" /></td>
-</tr>
-<tr>
     <td>ref</td>
     <td><input type="text" name="ref" placeholder="" /></td>
+</tr>
+<tr>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_newspaper()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
@@ -413,7 +413,7 @@ input[type="text"] {
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_magazine()" /><input type="reset" value="入力内容を消す" /></td>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_magazine()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
