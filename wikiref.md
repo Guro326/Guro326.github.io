@@ -160,7 +160,7 @@ https://guro326.github.io/wikiref
     <td><input type="text" name="yearDirect" onchange="date_replace()" placeholder="半角でYYYY-MM-DD"><br /><span class="directInputNote">（月･日は省略可）</span></td>
 </tr>
 <tr>
-    <td>ページ番号 pages</td>
+    <td>ページ番号 page(s)</td>
     <td><input type="text" name="pages" onchange="page_replace()" placeholder="記入例：12、12-13" /></td>
 </tr>
 <tr>
@@ -340,7 +340,7 @@ https://guro326.github.io/wikiref
     <td><input type="date" name="date" /><span class="need date">※</span></td>
 </tr>
 <tr>
-    <td>面(ページ番号) page</td>
+    <td>面(ページ番号) page(s)</td>
     <td><input type="text" name="page" placeholder="紙媒体の場合こちら" /></td>
 </tr>
 <tr>
