@@ -52,6 +52,16 @@ label {
 	visibility: hidden;
 }
 
+.option_visible {
+	visibility: visible;
+}
+
+input[type="text"] {
+	width: 15em;
+}
+
+</style>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="ref_tag.js"></script>
 
