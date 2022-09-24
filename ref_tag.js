@@ -15,6 +15,7 @@
 // 2022-09-23 @Guro326
 //            適宜カスタマイズ
 //            書籍 日付入力のカレンダーはやめる
+//            journal でも、学術論文と一般雑誌にわける
 
 // ページ読み込み時に非選択フォームを非表示にする
 jQuery(document).ready(function($){
@@ -76,7 +77,27 @@ function $tagged($tagname, $fieldvalue) {
 }
 
 
-// Web出典
+// 入力した場合のみ page タグをおこす
+// 「-」と「,」があるときだけ、pages にするか
+function $pagestag($fieldvalue) {
+	if($fieldvalue === undefined) {
+		return "";
+	}
+	else if($fieldvalue === "") {
+		return "";
+	}
+	else if ($fieldvalue.match(/[\-,]/g) == null) {
+		return " |page=" + $fieldvalue;
+	}
+	else  {
+		return " |pages=" + $fieldvalue;
+	}
+}
+
+
+
+
+// ■■ Web出典 ■■
 function ref_web() {
 	// 必須入力項目の確認
 	$url         = $("#ref_web>form>table>tbody>tr>td>input[name='url']").val();
@@ -112,6 +133,7 @@ function ref_web() {
 		" |publisher =" + $("#ref_web>form>table>tbody>tr>td>input[name='publisher']").val(),
 		$date,
 		" |accessdate=" + $accessdate,
+	$tagged("ref",        $("#ref_web>form>table>tbody>tr>td>input[name='ref']").val()),
 		"}}</ref>"
 	].join("");
 	
@@ -119,7 +141,8 @@ function ref_web() {
 }
 
 
-// PDF出典
+
+// ■■ PDF出典 ■■
 function ref_pdf() {
 	$url         = $("#ref_pdf>form>table>tbody>tr>td>input[name='url']").val();
 	$title       = $("#ref_pdf>form>table>tbody>tr>td>input[name='title']").val();
@@ -145,18 +168,23 @@ function ref_pdf() {
 	
 	var $reftag = [
 		"<ref>{{Cite web",
-		"|url=" + $("#ref_pdf>form>table>tbody>tr>td>input[name='url']").val(),
+		"|url="    + $("#ref_pdf>form>table>tbody>tr>td>input[name='url']").val(),
 		" |title=" + $("#ref_pdf>form>table>tbody>tr>td>input[name='title']").val(),
-		" |format=PDF |publisher =" + $("#ref_pdf>form>table>tbody>tr>td>input[name='publisher']").val(),
+		" |format=PDF",
+		" |publisher =" + $("#ref_pdf>form>table>tbody>tr>td>input[name='publisher']").val(),
 		$date,
 		" |accessdate=" + $accessdate,
+	$tagged("ref",        $("#ref_pdf>form>table>tbody>tr>td>input[name='ref']").val()),
 		"}}</ref>"
 	].join("");
 	
 	$("#result").val($reftag);
 }
 
-// アーカイブ
+
+
+
+// ■■ アーカイブ ■■
 function ref_archive() {
 	// 必須入力項目の確認
 	$url         = $("#ref_archive>form>table>tbody>tr>td>input[name='url']").val();
@@ -217,21 +245,24 @@ function ref_archive() {
 		" |archiveurl=" +  $archiveUrl,
 		" |archivedate=" + $archiveDate,
 		" |accessdate=" + $accessdate,
+	$tagged("ref",       $("#ref_archive>form>table>tbody>tr>td>input[name='ref']").val()),
 		"}}</ref>"
 	].join("");
 	
 	$("#result").val($reftag);
 }
 
-// 書籍
 
+
+
+// ■■ 書籍 ■■
 // 日付入力の形式を直接入力とカレンダー入力で切り替え
 function inputSelect($show,$hide,$active,$inactive) {
 	$($hide).css('display', 'none');
 	$($show).css('display', 'inline');
 	$($active).css('background', '#ffc0c0');
 	$($inactive).css('background', '#fff');
-
+	
 	if($show === "#directInput") {
 		$(".directInputNote").css('display', 'inline');
 	}
@@ -247,7 +278,7 @@ jQuery(document).ready(function($){
 	$($visible).css('display', 'inline');
 	$visibleLabel = $visible.replace("Input", 'Label');
 	$($visibleLabel).css('background', '#ffc0c0');
-
+	
 	if($visible === "#directInput") {
 		$(".directInputNote").css('display', 'inline');
 	}
@@ -315,11 +346,15 @@ function ref_book() {
 	var $date = $("#ref_book>form>table>tbody>tr>td>input[name='yearDirect']").val();
 	
 	var $jpno  = $("#ref_book>form>table>tbody>tr>td>input[name='jpno']").val();
-	if($checkEmpty($jpno) === 0) {
+	if($checkEmpty($jpno) === 1) {
+		$jpno = "";
+	} else {
 		$jpno = "{{全国書誌番号|" + $jpno + "}} ";
 	}
 	var $ndljp = $("#ref_book>form>table>tbody>tr>td>input[name='ndljp']").val();
-	if($checkEmpty($ndljp) === 0) {
+	if($checkEmpty($ndljp) === 1) {
+		$ndljp = "";
+	} else {
 		$ndljp = "{{NDLJP|" + $ndljp + "}} ";
 	}
 	var $idtag = "";
@@ -338,7 +373,7 @@ function ref_book() {
 	$tagged("volume",  $("#ref_book>form>table>tbody>tr>td>input[name='volume']").val()),
 		" |date=" + $date,
 		" |publisher=" + $("#ref_book>form>table>tbody>tr>td>input[name='publisher']").val(),
-		" |pages=" +   $("#ref_book>form>table>tbody>tr>td>input[name='pages']").val(),
+	$pagestag(          $("#ref_book>form>table>tbody>tr>td>input[name='pages']").val()),
 		" |isbn=" +    $("#ref_book>form>table>tbody>tr>td>input[name='isbn']").val(),
 	$tagged("NCID",    $("#ref_book>form>table>tbody>tr>td>input[name='ncid']").val()),
 		$idtag,
@@ -349,7 +384,10 @@ function ref_book() {
 	$("#result").val($reftag);
 }
 
-// 新聞
+
+
+
+// ■■ 新聞・ニュースサイト ■■
 function ref_newspaper() {
 	// 必須入力項目の確認
 	$title       = $("#ref_newspaper>form>table>tbody>tr>td>input[name='title']").val();
@@ -409,7 +447,7 @@ function ref_newspaper() {
 		               $news_source;
 	}
 	else {
-		$news_source = " |page=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='page']").val();
+		$news_source = $pagestag( $("#ref_newspaper>form>table>tbody>tr>td>input[name='pages']").val() );
 	}
 	
 	var $date = $("#ref_newspaper>form>table>tbody>tr>td>input[name='date']").val();
@@ -419,18 +457,22 @@ function ref_newspaper() {
 	
 	var $reftag = [
 		"<ref>{{Cite news",
-		"|title=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='title']").val(),
+		"|title=" +      $("#ref_newspaper>form>table>tbody>tr>td>input[name='title']").val(),
 		" |newspaper=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='newspaper']").val(),
-	$tagged("author", $("#ref_newspaper>form>table>tbody>tr>td>input[name='author']").val()),
+	$tagged("author",    $("#ref_newspaper>form>table>tbody>tr>td>input[name='author']").val()),
 		$date,
 		$news_source,
+	$tagged("ref",       $("#ref_newspaper>form>table>tbody>tr>td>input[name='ref']").val()),
 		"}}</ref>"
 	].join("");
 	
 	$("#result").val($reftag);
 }
 
-// 論文
+
+
+
+// ■■ 学術雑誌の論文 ■■
 function ref_journal() {
 	// 必須入力項目の確認
 	$title       = $("#ref_journal>form>table>tbody>tr>td>input[name='journal']").val();
@@ -447,12 +489,131 @@ function ref_journal() {
 		$("#ref_journal>form>table>tbody>tr>td>span.journal").text("※");
 	}
 	
+	$url = $("#ref_journal>form>table>tbody>tr>td>input[name='url']").val();
+	if($checkEmpty($url) === 1) {
+		$url = "";
+	}
+	else if ($url.match(/\.pdf[ ]*$/ig) == null) {
+		$url = " |url=" + $url;
+	}
+	else {
+		$url = " |url=" + $url + " |format=PDF";
+	}	
+	
+	var $crid  = $("#ref_journal>form>table>tbody>tr>td>input[name='crid']").val();
+	if($checkEmpty($crid) === 1) {
+		$crid = "";
+	} else {
+		$crid = "{{CRID|" + $crid + "}} ";
+	}
+	var $ndljp = $("#ref_journal>form>table>tbody>tr>td>input[name='ndljp']").val();
+	if($checkEmpty($ndljp) === 1) {
+		$ndljp = "";
+	} else {
+		$ndljp = "{{NDLJP|" + $ndljp + "}} ";
+	}
+	var $idtag = "";
+	if($checkEmpty($crid) === 0 || $checkEmpty($ndljp) === 0){
+		$idtag = " |ID=" + $crid + $ndljp;
+	}
+	
 	var $reftag = [
 		"<ref>{{Cite journal|和書",
-		"|journal=" + $("#ref_journal>form>table>tbody>tr>td>input[name='journal']").val(),
-		" |title=" + $("#ref_journal>form>table>tbody>tr>td>input[name='title']").val(),
-		" |volume=" + $("#ref_journal>form>table>tbody>tr>td>input[name='volume']").val(),
-		" |issue=" + $("#ref_journal>form>table>tbody>tr>td>input[name='issue']").val(),
+		"|journal="  +   $("#ref_journal>form>table>tbody>tr>td>input[name='journal']").val(),
+	$tagged("author",    $("#ref_journal>form>table>tbody>tr>td>input[name='author']").val()),
+	$tagged("title",     $("#ref_journal>form>table>tbody>tr>td>input[name='title']").val()),
+	$tagged("date",      $("#ref_journal>form>table>tbody>tr>td>input[name='date']").val()),
+	$tagged("volume",    $("#ref_journal>form>table>tbody>tr>td>input[name='volume']").val()),
+	$tagged("issue",     $("#ref_journal>form>table>tbody>tr>td>input[name='issue']").val()),
+	$tagged("number",    $("#ref_journal>form>table>tbody>tr>td>input[name='number']").val()),
+	$tagged("publisher", $("#ref_journal>form>table>tbody>tr>td>input[name='publisher']").val()),
+	$pagestag(           $("#ref_journal>form>table>tbody>tr>td>input[name='pages']").val()),
+		$url,
+	$tagged("doi",       $("#ref_journal>form>table>tbody>tr>td>input[name='doi']").val()),
+		$idtag,
+	$tagged("ref",       $("#ref_journal>form>table>tbody>tr>td>input[name='ref']").val()),
+		"}}</ref>"
+	].join("");
+	
+	$("#result").val($reftag);
+}
+
+
+// ■■ 雑誌の記事 ■■
+
+// 日付の書式整形
+function mag_date_replace() {
+	$str = $("#ref_magazine>form>table>tbody>tr>td>input[name='date']").val();
+	$str = $str.replace(/[０-９]/g, function(s) {
+        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    }).replace(/―|—|－|–|－|ー/g,'-').replace(/[^0-9\-]/g, '');
+	$("#ref_magazine>form>table>tbody>tr>td>input[name='date']").val($str);
+}
+
+// ページの書式整形
+function mag_page_replace() {
+	$str = $("#ref_magazine>form>table>tbody>tr>td>input[name='pages']").val();
+	$str = $str.replace(/[０-９]/g, function(s) {
+        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    }).replace(/―|—|－|–|－|ー/g,'-').replace(/[^0-9\-]/g, '');
+	$("#ref_magazine>form>table>tbody>tr>td>input[name='pages']").val($str);
+}
+
+function ref_magazine() {
+	// 必須入力項目の確認
+	$title       = $("#ref_magazine>form>table>tbody>tr>td>input[name='title']").val();
+	$journal     = $("#ref_magazine>form>table>tbody>tr>td>input[name='journal']").val();
+	
+	// 未入力の警告
+	if(($titleEmpty     = $checkEmpty($title)) === 1) {
+		$("#ref_magazine>form>table>tbody>tr>td>span.title").text("※入力必須");
+	}
+	if(($journalEmpty = $checkEmpty($journal)) === 1){
+		$("#ref_magazine>form>table>tbody>tr>td>span.journal").text("※入力必須");
+	}
+	
+	// 未入力時に処理を抜ける、未入力がなければ警告を消す
+	if($titleEmpty === 1 || $journalEmpty === 1){
+		return;
+	}
+	else {
+		$("#ref_magazine>form>table>tbody>tr>td>span.title").text("※");
+		$("#ref_magazine>form>table>tbody>tr>td>span.journal").text("※");
+	}
+	
+	// 日付パラメータがなければ省略
+	var $date = $("#ref_magazine>form>table>tbody>tr>td>input[name='date']").val();
+	if($date !== "") {
+		$date = " |date=" + $date;
+	}
+	
+	var $crid  = $("#ref_magazine>form>table>tbody>tr>td>input[name='crid']").val();
+	if($checkEmpty($crid) === 0) {
+		$crid = "{{CRID|" + $crid + "}} ";
+	}
+	var $oyalib = $("#ref_magazine>form>table>tbody>tr>td>input[name='oyalib']").val();
+	if($checkEmpty($oyalib) === 0) {
+		$oyalib = "{{OYALIB|" + $oyalib + "}} ";
+	}
+	var $idtag = "";
+	if($checkEmpty($crid) === 0 || $checkEmpty($oyalib) === 0){
+		$idtag = " |ID=" + $crid + $oyalib;
+	}
+	
+	var $reftag = [
+		"<ref>{{Cite journal|和書",
+	$tagged("author",  $("#ref_magazine>form>table>tbody>tr>td>input[name='author']").val()),
+		" |title="  +  $("#ref_magazine>form>table>tbody>tr>td>input[name='title']").val(),
+		" |journal=" + $("#ref_magazine>form>table>tbody>tr>td>input[name='journal']").val(),
+	$tagged("volume" , $("#ref_magazine>form>table>tbody>tr>td>input[name='volume']").val()),
+	$tagged("issue"  , $("#ref_magazine>form>table>tbody>tr>td>input[name='issue']").val()),
+	$tagged("number",  $("#ref_magazine>form>table>tbody>tr>td>input[name='number']").val()),
+	$tagged("publisher", $("#ref_magazine>form>table>tbody>tr>td>input[name='publisher']").val()),
+		$date,
+	$pagestag(         $("#ref_magazine>form>table>tbody>tr>td>input[name='pages']").val()),
+	$tagged("issn",    $("#ref_magazine>form>table>tbody>tr>td>input[name='issn']").val()),
+		$idtag,
+	$tagged("ref",     $("#ref_magazine>form>table>tbody>tr>td>input[name='ref']").val()),
 		"}}</ref>"
 	].join("");
 	
