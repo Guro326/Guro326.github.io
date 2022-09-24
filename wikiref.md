@@ -380,16 +380,16 @@ https://guro326.github.io/wikiref
 	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_journal" target="_new">Cite journal</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
-    <td class="first_input">雑誌名 journal</td>
-    <td><input type="text" name="journal" /><span class="need journal">※</span></td>
+    <td>記事の著者 author</td>
+    <td><input type="text" name="author" /></td>
 </tr>
 <tr>
-    <td>記事のタイトル title</td>
+    <td>「記事のタイトル」 title</td>
     <td><input type="text" name="title" /><span class="need title">※</span></td>
 </tr>
 <tr>
-    <td>記事の著者 author</td>
-    <td><input type="text" name="author" /></td>
+    <td class="first_input">『雑誌名』 journal</td>
+    <td><input type="text" name="journal" /><span class="need journal">※</span></td>
 </tr>
 <tr>
     <td>出版社 publisher</td>
@@ -397,30 +397,42 @@ https://guro326.github.io/wikiref
 </tr>
 <tr>
     <td>雑誌の発行年月日 date</td>
-    <td><input type="date" name="date" /></td>
+    <td><input type="text" name="date" onchange="mag_date_replace()" placeholder="半角でYYYY-MM-DD"><br /><span>（月･日は省略可）</span></td>
 </tr>
 <tr>
-    <td>巻 volume</td>
-    <td><input type="text" name="volume" /></td>
+    <td>巻号 volume issue</td>
+    <td>第<input type="text" name="volume" size="2em" id="voliss" />巻 第<input type="text" name="issue" size="2em" id="voliss" />号</td>
 </tr>
 <tr>
-    <td>号 issue</td>
-    <td><input type="text" name="issue" /></td>
+    <td>通巻 number</td>
+    <td><input type="text" name="number" /></td>
 </tr>
 <tr>
-    <td>ページ番号 pages</td>
-    <td><input type="text" name="pages" onchange="page_replace()" placeholder="記入例：12、12-13" /></td>
+    <td>ページ番号 page(s)</td>
+    <td><input type="text" name="pages" onchange="mag_page_replace()" placeholder="記入例：12、12-13" /></td>
 </tr>
 <tr>
-    <td>id</td>
-    <td><input type="text" name="id" placeholder="" /></td>
+    <td><a href="https://ja.wikipedia.org/wiki/Template:ISSN" target="_new">ISSN</a></td>
+    <td><input type="text" name="issn" placeholder="例 1881-7661" /></td>
+</tr>
+<tr>
+    <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:CRID" target="_new">CRID</a>&#x7d;&#x7d;<br />
+    <a href="https://cir.nii.ac.jp/articles/" target="_new">CiNii Research</a>のCRID</td>
+    <td><input type="text" name="crid" placeholder="例 1050010920565717888" /></td></tr>
+<tr>
+    <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:OYALIB" target="_new">OYALIB</a>&#x7d;&#x7d;<br />
+    <a href="https://oya-bunko.opac.jp/opac/Advanced_search" target="_new">大宅壮一文庫 蔵書検索</a>結果の登録番号のID</td>
+    <td><input type="text" name="oyalib" placeholder="例 100069321" /></td>
+</tr>
+<tr>
+<td colspan="2" ></td>
 </tr>
 <tr>
     <td>ref</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_magazine()" /><input type="reset" value="入力内容を消す" /></td>
+<td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_magazine()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
