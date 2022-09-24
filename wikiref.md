@@ -52,16 +52,6 @@ label {
 	visibility: hidden;
 }
 
-.option_visible {
-	visibility: visible;
-}
-
-input[type="text"] {
-	width: 15em;
-}
-
-</style>
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="ref_tag.js"></script>
 
@@ -71,19 +61,22 @@ input[type="text"] {
 
 <div id="type">
 <p>
-<input type="radio" name="type" onClick="type_change('#ref_book')" id="book" value="#ref_book" checked><label for="book">書籍</label><br/>
+<input type="radio" name="type" onclick="type_change('#ref_book')" id="book" value="#ref_book"  checked=""/><label for="book">書籍</label><br />
 	
-<input type="radio" name="type" onClick="type_change('#ref_web')" id="web" value="#ref_web"><label for="web">Web出典</label><br/>
+<input type="radio" name="type" onclick="type_change('#ref_magazine')" id="magazine" value="#ref_magazine" /><label for="magazine">雑誌の記事</label><br />
 	
-<input type="radio" name="type" onClick="type_change('#ref_archive')" id="archive" value="#ref_archive"><label for="archive">Archive(web.archive.org)を含める場合</label><br/>
+<input type="radio" name="type" onclick="type_change('#ref_web')" id="web" value="#ref_web" /><label for="web">Web出典</label><br />
 	
-<input type="radio" name="type" onClick="type_change('#ref_pdf')" id="pdf" value="#ref_pdf"><label for="pdf">PDF出典</label><br/>
+<input type="radio" name="type" onclick="type_change('#ref_archive')" id="archive" value="#ref_archive" /><label for="archive">Archive(web.archive.org)を含める場合</label><br />
 	
-<input type="radio" name="type" onClick="type_change('#ref_newspaper')" id="newspaper" value="#ref_newspaper"><label for="newspaper">新聞・ニュースサイト</label><br/>
+<input type="radio" name="type" onclick="type_change('#ref_pdf')" id="pdf" value="#ref_pdf" /><label for="pdf">PDF出典</label><br />
 	
-<input type="radio" name="type" onClick="type_change('#ref_journal')" id="journal" value="#ref_journal"><label for="journal">学術雑誌の論文</label><br/>
+<input type="radio" name="type" onclick="type_change('#ref_newspaper')" id="newspaper" value="#ref_newspaper" /><label for="newspaper">新聞・ニュースサイト</label><br />
 	
-<input type="radio" name="type" onClick="type_change('#ref_tweet')" id="tweet" value="#ref_tweet" class="opiton_hide" disabled><label for="tweet" class="opiton_hide">Twitter</label><br/>
+<input type="radio" name="type" onclick="type_change('#ref_journal')" id="journal" value="#ref_journal" /><label for="journal">学術雑誌の論文</label><br />
+	
+<input type="radio" name="type" onclick="type_change('#ref_tweet')" id="tweet" value="#ref_tweet" class="opiton_hide" disabled="" /><label for="tweet" class="opiton_hide">Twitter</label><br />
+
 	
 </p>
 
@@ -103,19 +96,19 @@ input[type="text"] {
     <td><input type="text" name="author" /></td>
 </tr>
 <tr>
-    <td>著者名リンク authorlink<br />※著者名に[[リンク]]するときにはこちらに<u>も</u>記入</td>
-    <td><input type="text" name="author_link" placeholder="[[]]は不要" /></td>
+    <td>著者名リンク authorlink</td>
+    <td><input type="text" name="author_link" placeholder="[[]]は不要" /><br />著者名に[[リンク]]するときにはこちらに<u>も</u>記入</td>
 </tr>
 <tr>
     <td>編者 editor<br /></td>
-    <td><input type="text" name="editor" placeholder="｢編｣｢編集｣はつけない。リンクは[[]]で" /></td>
+    <td><input type="text" name="editor" placeholder="｢編｣｢編集｣は不要 リンクは[[]]で" /></td>
 </tr>
 <tr>
     <td>『書名』 title</td>
     <td><input type="text" name="title" /><span class="need title">※</span></td>
 </tr>
 <tr>
-    <td>版 edition</td>
+    <td>（版） edition</td>
     <td><input type="text" name="edition" placeholder="初版、第2版など" /></td>
 </tr>
 <tr>
@@ -147,7 +140,7 @@ input[type="text"] {
 </tr-->
 <tr>
     <td>出版日付 date</td>
-    <td><input type="text" name="yearDirect" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span class="directInputNote">（月･日は省略可）</span></td>
+    <td><input type="text" name="yearDirect" onchange="date_replace()" placeholder="半角でYYYY-MM-DD"><br /><span class="directInputNote">（月･日は省略可）</span></td>
 </tr>
 <tr>
     <td>ページ番号 pages</td>
@@ -156,6 +149,9 @@ input[type="text"] {
 <tr>
     <td>ISBN</td>
     <td><input type="text" name="isbn" placeholder="ハイフンは省略可" onchange="isbn_replace()" /></td>
+</tr>
+<tr>
+    <td colspan="2">ISBNがない書籍は以下のいずれかを入力する</td>
 </tr>
 <tr>
     <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:NCID" target="_new">NCID</a>&#x7d;&#x7d;<br />
@@ -171,6 +167,9 @@ input[type="text"] {
     <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:%E8%BF%91%E4%BB%A3%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%BC" target="_new">NDLJP</a>&#x7d;&#x7d;<br />
     <a href="https://dl.ndl.go.jp/" target="_new">国立国会図書館デジタルコレクション</a>URLに表記されている識別子/コマ番号</td>
     <td><input type="text" name="ndljp" placeholder="例 888725/3" /></td>
+</tr>
+<tr>
+    <td colspan="2"></td>
 </tr>
 <tr>
     <td>ref</td>
