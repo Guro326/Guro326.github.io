@@ -1,4 +1,9 @@
 
+---
+layout: jp
+title: 出典タグを生成する
+---
+
 <style type="text/css">
 .book_date {
 	height: 50px;
