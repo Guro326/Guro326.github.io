@@ -341,7 +341,7 @@ https://guro326.github.io/wikiref
 </tr>
 <tr>
     <td>面(ページ番号) page(s)</td>
-    <td><input type="text" name="page" placeholder="紙媒体の場合こちら" /></td>
+    <td><input type="text" name="pages" placeholder="紙媒体の場合こちら" /></td>
 </tr>
 <tr>
     <td>アドレス url</td>
@@ -437,24 +437,47 @@ https://guro326.github.io/wikiref
 	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_journal" target="_new">Cite journal</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
-    <td class="first_input">誌名 journal</td>
+    <td>著者 author</td>
+    <td><input type="text" name="author" /></td>
+</tr>
+<tr>
+    <td class="first_input">『誌名』 journal</td>
     <td><input type="text" name="journal" /><span class="need journal">※</span></td>
 </tr>
 <tr>
-    <td>論文名 title</td>
+    <td>「論文名」 title</td>
     <td><input type="text" name="title" /></td>
 </tr>
 <tr>
-    <td>巻 volume</td>
-    <td><input type="text" name="volume" /></td>
+    <td>論文リンク url</td>
+    <td><input type="text" name="url" /></td>
 </tr>
 <tr>
-    <td>号 issue</td>
-    <td><input type="text" name="issue" /></td>
+    <td>刊行年月日 date</td>
+    <td><input type="text" name="date" placeholder="半角でYYYY-MM-DD"><br /><span>（月･日は省略可）</span></td>
 </tr>
 <tr>
-    <td>id</td>
-    <td><input type="text" name="id" placeholder="" /></td>
+    <td>巻号 volume issue</td>
+    <td>第<input type="text" name="volume" size="2em" id="voliss" />巻 第<input type="text" name="issue" size="2em" id="voliss" />号</td>
+</tr>
+<tr>
+    <td>ページ番号 page(s)</td>
+    <td><input type="text" name="pages" placeholder="記入例：12、12-13" /></td>
+</tr>
+<tr>
+    <td>発行元 publisher</td>
+    <td><input type="text" name="publisher" placeholder="学会名・団体名など" /></td>
+</tr>
+<tr>
+    <td>doi</td>
+    <td><input type="text" name="doi" placeholder="10.24506/jsda.5.s1_s122f" /></td>
+</tr>
+<tr>
+    <td>&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:CRID" target="_new">CRID</a>&#x7d;&#x7d;<br />
+    <a href="https://cir.nii.ac.jp/articles/" target="_new">CiNii Research</a>のCRID</td>
+    <td><input type="text" name="crid" placeholder="例 1050010920565717888" /></td></tr>
+<tr>
+    <td colspan="2"></td>
 </tr>
 <tr>
     <td>ref</td>
@@ -495,7 +518,7 @@ https://guro326.github.io/wikiref
 </div>
 
 <p>
-<textarea cols="50" rows="5" id="result" onfocus="this.select()"></textarea>
+<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </p>
 
 初版を作った人 special thanks to：[利用者:Marine-Blue](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Marine-Blue)　[original site](http://mb1223jawp.php.xdomain.jp/wptown/reference.html)
