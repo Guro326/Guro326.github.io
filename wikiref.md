@@ -1,4 +1,3 @@
-
 ---
 layout: jp
 title: 出典タグを生成する
