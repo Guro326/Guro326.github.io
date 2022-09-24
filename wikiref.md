@@ -355,6 +355,10 @@ input[type="text"] {
 <tr>
     <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_newspaper()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
+<tr>
+    <td>ref</td>
+    <td><input type="text" name="ref" placeholder="" /></td>
+</tr>
 </table>
 </form>
 </div>
