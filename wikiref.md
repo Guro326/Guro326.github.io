@@ -77,7 +77,7 @@ input[type="text"]
 </style>
 
 
-[https://guro326.github.io/wikiref](https://guro326.github.io/wikiref))
+[https://guro326.github.io/wikiref](https://guro326.github.io/wikiref)
 
 
 <div id="type">
