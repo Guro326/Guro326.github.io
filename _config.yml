@@ -1,4 +1,4 @@
-title: 
+title: ""
 languages: 'ja'
 default_lang: 'ja'
 defaults:
@@ -7,5 +7,5 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "pages"
     values:
-      layout: "default" #"project"
-      category: "default" # "project"
+      layout: "new" #"default" #"project"
+      category: "new"  #"default" # "project"
