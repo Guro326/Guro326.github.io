@@ -7,8 +7,8 @@ defaults:
       path: "wikiref" # an empty string here means all files in the project
       type: "pages"
     values:
-      layout: "page2" #"default" #"project"
-      category: "project"  #"default" # "project"
+      layout: "default" #"default" #"project"
+      category: "default"  #"default" # "project"
   -
   scope:
       path: "" # an empty string here means all files in the project
