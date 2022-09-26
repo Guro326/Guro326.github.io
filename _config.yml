@@ -7,13 +7,13 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "pages"
    values:
-      layout: "project" #"new" #"default"
-      category: "project" #"new" #"default"
-  -
-  scope:
-      path: "./wikiref.md" # an empty string here means all files in the project
-      type: "pages"
-    values:
-      layout: "page2" #"default" #"project"
-      category: "default"  #"default" # "project"
+      layout: "page" #"default"
+      category: "page" #"new" #"default"
+#  -
+#  scope:
+#      path: "./wikiref.md" # an empty string here means all files in the project
+#      type: "pages"
+#    values:
+#      layout: "page2" #"default" #"project"
+#      category: "default"  #"default" # "project"
       
