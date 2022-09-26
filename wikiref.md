@@ -1,4 +1,5 @@
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="ref_tag.js"></script>
 <style type="text/css">
 .book_date {
 	height: 50px;
@@ -68,9 +69,6 @@ input[type="text"]
 }
 
 </style>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="ref_tag.js"></script>
 
 
 # ウィキペディア編集イベント向け | 出典タグを生成する
