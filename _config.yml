@@ -3,13 +3,13 @@ languages: 'ja'
 default_lang: 'ja'
 
 #defaults:
-#  -
-#  scope:
-#      path: "" # an empty string here means all files in the project
-#      type: "pages"
-#   values:
-#      layout: "page" #"default"
-#      category: "page" #"new" #"default"
+  -
+  scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages"
+   values:
+      layout: "page" #"default"
+      category: "page" #"new" #"default"
 #  -
 #  scope:
 #      path: "./wikiref.md" # an empty string here means all files in the project
