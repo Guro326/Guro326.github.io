@@ -1,4 +1,11 @@
-title: 
+title: Guro326
 languages: 'ja'
 default_lang: 'ja'
-layout: page
+defaults:
+  -
+    scope:
+      path: "projects"
+      type: "pages"
+    values:
+      layout: "project"
+      category: "project"
