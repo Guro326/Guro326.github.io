@@ -1,15 +1,15 @@
-title: "Guro326.github.io"
+title: "title_Guro326.github.io"
 languages: 'ja'
 default_lang: 'ja'
 
-defaults:
-  -
-  scope:
-      path: "" # an empty string here means all files in the project
-      type: "pages"
-   values:
-      layout: "default" # "page" #
-      category: "default" #"new" #"default"
+# defaults:
+#   -
+#   scope:
+#       path: "" # an empty string here means all files in the project
+#       type: "pages"
+#    values:
+#       layout: "default" # "page" #
+#       category: "default" #"new" #"default"
 #  -
 #  scope:
 #      path: "./wikiref.md" # an empty string here means all files in the project
