@@ -1,7 +1,7 @@
 title: "title_Guro326.github.io"
 languages: 'ja'
 default_lang: 'ja'
-theme: Jekyll # minima
+theme: jekyll-theme-minimal # minima
 
 # defaults:
 #   -
