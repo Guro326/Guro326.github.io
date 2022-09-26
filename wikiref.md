@@ -72,7 +72,7 @@ input[type="text"]
 </style>
 
 
-# ウィキペディア編集イベント向け | 出典タグを生成する
+
 https://guro326.github.io/wikiref
 
 <div id="type">
