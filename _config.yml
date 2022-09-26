@@ -10,11 +10,10 @@ locale: "ja-JP"  # 日本語を扱うなら変更しておく
 #- jekyll-remote-theme # add this line to the plugins list if you already have one
 
 defaults:
-  -
-  scope:
+  -  scope:
       path: "" # an empty string here means all files in the project
       type: "pages"
-   values:
+     values:
       layout: "default" # "page" #
 #      category: "default" #"new" #"default"
  -
