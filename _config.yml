@@ -1,6 +1,7 @@
 title: "title_Guro326.github.io"
 languages: 'ja'
 default_lang: 'ja'
+locale: "ja-JP"  # 日本語を扱うなら変更しておく
 # theme: minimal
 # remote_theme: pages-themes/minimal@v0.2.0
 #remote_theme: minima
