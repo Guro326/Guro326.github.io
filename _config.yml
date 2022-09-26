@@ -6,9 +6,9 @@ defaults:
   scope:
       path: "" # an empty string here means all files in the project
       type: "pages"
-    values:
-      layout: "project" #"new" #"default" 
-      category: "project" #"new" #"default" 
+   values:
+      layout: "project"  #"new" #"default"
+      category: "project" #"new" #"default"
 #  -
 #  scope:
 #      path: "wikiref" # an empty string here means all files in the project
