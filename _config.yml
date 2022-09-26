@@ -9,7 +9,7 @@ defaults:
       type: "pages"
    values:
       layout: "default" # "page" #
-      category: "page" #"new" #"default"
+      category: "default" #"new" #"default"
 #  -
 #  scope:
 #      path: "./wikiref.md" # an empty string here means all files in the project
