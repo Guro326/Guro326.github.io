@@ -7,5 +7,5 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "pages"
     values:
-      layout: "project"
-      category: "project"
+      layout: "default" #"project"
+      category: "default" # "project"
