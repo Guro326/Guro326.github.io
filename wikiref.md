@@ -1,4 +1,5 @@
 ---
+site.title: あああ
 layout: page2
 title: タイトル
 ---
