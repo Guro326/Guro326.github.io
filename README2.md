@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: xx_post
 title: title_readme2
 ---
 
