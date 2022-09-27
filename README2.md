@@ -1,5 +1,5 @@
 ---
-layout: xx_post
+layout: page #xx_post
 title: title_readme2
 ---
 
