@@ -1,5 +1,5 @@
 ---
-layout: page2
+layout: simple
 title: ウィキペディア編集イベント向け | 出典タグを生成する
 ---
 
