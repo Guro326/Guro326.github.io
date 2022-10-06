@@ -234,6 +234,9 @@ input[type="text"]
     <td>（自動セット）</td>
 </tr>
 <tr>
+    <td colspan="2"></td>
+</tr>
+<tr>
     <td>ref</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
