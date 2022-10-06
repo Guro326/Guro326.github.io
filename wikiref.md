@@ -270,6 +270,10 @@ input[type="text"]
     <td><input type="text" name="publisher" placeholder="企業・団体名など" /></td>
 </tr>
 <tr>
+    <td>閲覧日 access-date</td>
+    <td>（自動セット）</td>
+</tr>
+<tr>
     <td>アーカイブURL archiveurl</td>
     <td><input type="text" name="archive" /><span class="need arcurl">※</span></td>
 </tr>
