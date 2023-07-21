@@ -426,11 +426,6 @@ function ref_newspaper() {
 		$("#ref_newspaper>form>table>tbody>tr>td>span.date").text("※");
 	}
 
-	var $edition = $("#ref_newspaper>form>table>tbody>tr>td>input[name='$edition']").val();
-	if($edition !== "") {
-		$edition = " |edition=" + $edition;
-	}
-	
 	var $news_source = "";
 	
 	//Web媒体で入力された場合にのみ、アーカイブを記載
@@ -479,7 +474,7 @@ function ref_newspaper() {
 		" |newspaper=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='newspaper']").val(),
 	$tagged("author",    $("#ref_newspaper>form>table>tbody>tr>td>input[name='author']").val()),
 		$date,
-		$edition,
+	$tagged("edition",   $("#ref_newspaper>form>table>tbody>tr>td>input[name='edition']").val()),
 		$news_source,
 	$tagged("ref",       $("#ref_newspaper>form>table>tbody>tr>td>input[name='ref']").val()),
 		"}}</ref>"
