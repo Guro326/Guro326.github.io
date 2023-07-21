@@ -198,6 +198,7 @@ input[type="text"]
    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_book()" /> <input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
+<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
