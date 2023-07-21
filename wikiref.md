@@ -134,10 +134,10 @@ input[type="text"]
     <td>〈シリーズ〉 series</td>
     <td><input type="text" name="series" placeholder="○○新書なども" /></td>
 </tr>
-<!--tr>
+<tr>
     <td>巻 volume</td>
-    <td><input type="text" name="volume" placeholder="1、下、など。文庫や新書はその番号。" /></td>
-</tr-->
+    <td><input type="text" name="volume" placeholder="1、下、など" size="2em" id="voliss" />巻</td>
+</tr>
 <tr>
     <td>出版者 publisher</td>
     <td><input type="text" name="publisher" placeholder="出版社名、団体名など" /><span class="need publisher">※</span></td>
