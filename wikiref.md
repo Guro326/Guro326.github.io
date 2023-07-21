@@ -342,6 +342,10 @@ input[type="text"]
     <td><input type="date" name="date" /><span class="need date">※</span></td>
 </tr>
 <tr>
+    <td>版 edition</td>
+    <td><input type="text" name="edition" placeholder="第13版 夕刊 湘南版 土曜版など" /></td>
+</tr>
+<tr>
     <td>面(ページ番号) page(s)</td>
     <td><input type="text" name="pages" placeholder="紙媒体の場合こちら" /></td>
 </tr>
@@ -362,7 +366,7 @@ input[type="text"]
     <td><input type="date" name="archivedate" /><br />（web.archive.org 以外は手入力が必要）</td>
 </tr>
 <tr>
-    <td>ref<br /> harv か &#x7b;&#x7b;SfnRef&#x7c;著者姓&#x7c;2023&#x7d;&#x7d; を書くなら</td>
+    <td>ref</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
