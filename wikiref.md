@@ -195,7 +195,7 @@ input[type="text"]
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-   <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_book()" /><input type="reset" value="入力内容を消す" /></td>
+   <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_book()" /><input type="reset" value="入力内容を消す" onclick="reset_form()" /></td>
 </tr>
 </table>
 </form>
