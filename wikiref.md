@@ -195,7 +195,7 @@ input[type="text"]
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-   <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_book()" /> <input type="reset" value="入力内容を消す" onclick="reset_form()" /></td>
+   <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_book()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
@@ -234,14 +234,11 @@ input[type="text"]
     <td>（自動セット）</td>
 </tr>
 <tr>
-    <td colspan="2"></td>
-</tr>
-<tr>
     <td>ref</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_web()" /> <input type="reset" value="入力内容を消す" onclick="reset_form()" /></td>
+<td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_web()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
@@ -270,10 +267,6 @@ input[type="text"]
     <td><input type="text" name="publisher" placeholder="企業・団体名など" /></td>
 </tr>
 <tr>
-    <td>閲覧日 access-date</td>
-    <td>（自動セット）</td>
-</tr>
-<tr>
     <td>アーカイブURL archiveurl</td>
     <td><input type="text" name="archive" /><span class="need arcurl">※</span></td>
 </tr>
@@ -282,14 +275,11 @@ input[type="text"]
     <td><input type="date" name="archivedate" /><span class="need arcdate"></span><br />（web.archive.org 以外は手入力が必要）</td>
 </tr>
 <tr>
-    <td colspan="2"></td>
-</tr>
-<tr>
     <td>ref</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_archive()" /> <input type="reset" value="入力内容を消す" onclick="reset_form" /></td>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_archive()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
@@ -324,14 +314,7 @@ input[type="text"]
     <td><input type="date" name="date" /></td>
 </tr>
 <tr>
-    <td colspan="2"></td>
-</tr>
-<tr>
-    <td>ref</td>
-    <td><input type="text" name="ref" placeholder="" /></td>
-</tr>
-<tr>
-    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_pdf()" /> <input type="reset" value="入力内容を消す" onclick="reset_form" /></td>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_pdf()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
@@ -379,14 +362,11 @@ input[type="text"]
     <td><input type="date" name="archivedate" /><br />（web.archive.org 以外は手入力が必要）</td>
 </tr>
 <tr>
-    <td colspan="2"></td>
-</tr>
-<tr>
     <td>ref</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_newspaper()" /> <input type="reset" value="入力内容を消す" onclick="reset_form" /></td>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_newspaper()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
@@ -454,7 +434,7 @@ input[type="text"]
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-<td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_magazine()" /> <input type="reset" value="入力内容を消す" onclick="reset_form" /></td>
+<td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_magazine()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
@@ -518,7 +498,7 @@ input[type="text"]
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
-    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_journal()" /> <input type="reset" value="入力内容を消す" onclick="reset_form" /></td>
+    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_journal()" /><input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
 </form>
@@ -545,7 +525,7 @@ input[type="text"]
 <td>本文</td><td><textarea cols="50" rows="3" name="tweet"></textarea></td>
 </tr>
 <tr>
-<td colspan="2" class="button"><span class="need">※</span>全部入力推奨<br><input type="button" value="入力完了" onClick="ref_tweet()"> <input type="reset" value="入力内容を消す"></td>
+<td colspan="2" class="button"><span class="need">※</span>全部入力推奨<br><input type="button" value="入力完了" onClick="ref_tweet()"><input type="reset" value="入力内容を消す"></td>
 </tr>
 </table>
 </form>
