@@ -191,7 +191,7 @@ input[type="text"]
     <td colspan="2"></td>
 </tr>
 <tr>
-    <td>ref</td>
+    <td>ref<br /> harv か &#x7b;&#x7b;SfnRef&#x7c;著者姓&#x7c;2023&#x7d;&#x7d; を書くなら</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
@@ -234,7 +234,7 @@ input[type="text"]
     <td>（自動セット）</td>
 </tr>
 <tr>
-    <td>ref</td>
+    <td>ref<br /> harv か &#x7b;&#x7b;SfnRef&#x7c;著者姓&#x7c;2023&#x7d;&#x7d; を書くなら</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
@@ -275,7 +275,7 @@ input[type="text"]
     <td><input type="date" name="archivedate" /><span class="need arcdate"></span><br />（web.archive.org 以外は手入力が必要）</td>
 </tr>
 <tr>
-    <td>ref</td>
+    <td>ref<br /> harv か &#x7b;&#x7b;SfnRef&#x7c;著者姓&#x7c;2023&#x7d;&#x7d; を書くなら</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
@@ -362,7 +362,7 @@ input[type="text"]
     <td><input type="date" name="archivedate" /><br />（web.archive.org 以外は手入力が必要）</td>
 </tr>
 <tr>
-    <td>ref</td>
+    <td>ref<br /> harv か &#x7b;&#x7b;SfnRef&#x7c;著者姓&#x7c;2023&#x7d;&#x7d; を書くなら</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
@@ -430,7 +430,7 @@ input[type="text"]
 <td colspan="2" ></td>
 </tr>
 <tr>
-    <td>ref</td>
+    <td>ref<br /> harv か &#x7b;&#x7b;SfnRef&#x7c;著者姓&#x7c;2023&#x7d;&#x7d; を書くなら</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
@@ -494,7 +494,7 @@ input[type="text"]
     <td colspan="2"></td>
 </tr>
 <tr>
-    <td>ref</td>
+    <td>ref<br /> harv か &#x7b;&#x7b;SfnRef&#x7c;著者姓&#x7c;2023&#x7d;&#x7d; を書くなら</td>
     <td><input type="text" name="ref" placeholder="" /></td>
 </tr>
 <tr>
