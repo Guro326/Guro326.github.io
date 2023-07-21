@@ -37,6 +37,13 @@ function insertStr(str, index, insert) {
     return str.slice(0, index) + insert + str.slice(index, str.length);
 }
 
+// フォームのリセット、とともに、テキストエリアのクリア
+function reset_form {
+          //  $("#DemoForm").trigger("reset");
+	document.form.reset();
+	$('#result').val('');
+}
+
 // assessdate の取得
 var day = new Date();
 var y = day.getFullYear();
