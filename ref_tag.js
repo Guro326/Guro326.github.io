@@ -40,7 +40,7 @@ function insertStr(str, index, insert) {
 // フォームのリセット、とともに、テキストエリアのクリア
 function reset_form() {
           //  $("#DemoForm").trigger("reset");
-	document.form.reset();
+	document.forms.reset();
 	$('#result').val('');
 }
 
