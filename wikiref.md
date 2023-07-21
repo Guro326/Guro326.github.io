@@ -198,7 +198,6 @@ input[type="text"]
    <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_book()" /> <input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
-<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
@@ -245,7 +244,6 @@ input[type="text"]
 <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_web()" /> <input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
-<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
@@ -294,7 +292,6 @@ input[type="text"]
     <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_archive()" /> <input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
-<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
@@ -337,7 +334,6 @@ input[type="text"]
     <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_pdf()" /> <input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
-<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
@@ -393,7 +389,6 @@ input[type="text"]
     <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_newspaper()" /> <input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
-<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
@@ -462,7 +457,6 @@ input[type="text"]
 <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_magazine()" /> <input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
-<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
@@ -527,7 +521,6 @@ input[type="text"]
     <td colspan="2" class="button"><input type="button" value="入力完了" onclick="ref_journal()" /> <input type="reset" value="入力内容を消す" /></td>
 </tr>
 </table>
-<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
@@ -555,13 +548,12 @@ input[type="text"]
 <td colspan="2" class="button"><span class="need">※</span>全部入力推奨<br><input type="button" value="入力完了" onClick="ref_tweet()"> <input type="reset" value="入力内容を消す"></td>
 </tr>
 </table>
-<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
 </form>
 </div>
 
-<!--p
-  <textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
- /p -->
+<p>
+<textarea cols="70" rows="6" id="result" onfocus="this.select()"></textarea>
+</p>
 
 初版を作った人 special thanks to：[利用者:Marine-Blue](https://ja.wikipedia.org/wiki/%E5%88%A9%E7%94%A8%E8%80%85:Marine-Blue)　[original site](http://mb1223jawp.php.xdomain.jp/wptown/reference.html)
 
