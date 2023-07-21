@@ -17,6 +17,11 @@
 //            書籍 日付入力のカレンダーはやめる
 //            journal でも、学術論文と一般雑誌にわける
 
+// 2023-07-21 @Guro326
+//            リセットボタンで出力textareaもクリアする
+//            書籍bookの「巻」を復活
+//            新聞に和書を追加・webでもpagesを入れる（紙と共に）・版もついか
+
 // ページ読み込み時に非選択フォームを非表示にする
 jQuery(document).ready(function($){
 	$(".ref_type").css('display', 'none');
@@ -420,6 +425,11 @@ function ref_newspaper() {
 		$("#ref_newspaper>form>table>tbody>tr>td>span.news").text("※");
 		$("#ref_newspaper>form>table>tbody>tr>td>span.date").text("※");
 	}
+
+	var $edition = $("#ref_newspaper>form>table>tbody>tr>td>input[name='$edition']").val();
+	if($edition !== "") {
+		$edition = " |edition=" + $edition;
+	}
 	
 	var $news_source = "";
 	
@@ -449,13 +459,14 @@ function ref_newspaper() {
 	// Web媒体と紙媒体で処理分け
 	if($("#ref_newspaper>form>table>tbody>tr>td>input[name='url']").val() != "") {
 		$news_source = " |url=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='url']").val() +
-		               " |accessdate=" + 
-		               $accessdate + 
+		               " |accessdate=" + $accessdate + 
 		               $news_source;
 	}
-	else {
-		$news_source = $pagestag( $("#ref_newspaper>form>table>tbody>tr>td>input[name='pages']").val() );
-	}
+	//else {
+	//	$news_source = $pagestag( $("#ref_newspaper>form>table>tbody>tr>td>input[name='pages']").val() );
+	//}
+	$news_source = $pagestag( $("#ref_newspaper>form>table>tbody>tr>td>input[name='pages']").val() ) +
+			$news_source;
 	
 	var $date = $("#ref_newspaper>form>table>tbody>tr>td>input[name='date']").val();
 	if($date !== "") {
@@ -463,11 +474,12 @@ function ref_newspaper() {
 	}
 	
 	var $reftag = [
-		"<ref>{{Cite news",
-		"|title=" +      $("#ref_newspaper>form>table>tbody>tr>td>input[name='title']").val(),
+		"<ref>{{Cite news|和書|",
+		"title=" +      $("#ref_newspaper>form>table>tbody>tr>td>input[name='title']").val(),
 		" |newspaper=" + $("#ref_newspaper>form>table>tbody>tr>td>input[name='newspaper']").val(),
 	$tagged("author",    $("#ref_newspaper>form>table>tbody>tr>td>input[name='author']").val()),
 		$date,
+		$edition,
 		$news_source,
 	$tagged("ref",       $("#ref_newspaper>form>table>tbody>tr>td>input[name='ref']").val()),
 		"}}</ref>"
@@ -525,8 +537,8 @@ function ref_journal() {
 	}
 	
 	var $reftag = [
-		"<ref>{{Cite journal|和書",
-		"|journal="  +   $("#ref_journal>form>table>tbody>tr>td>input[name='journal']").val(),
+		"<ref>{{Cite journal|和書|",
+		"journal="  +   $("#ref_journal>form>table>tbody>tr>td>input[name='journal']").val(),
 	$tagged("author",    $("#ref_journal>form>table>tbody>tr>td>input[name='author']").val()),
 	$tagged("title",     $("#ref_journal>form>table>tbody>tr>td>input[name='title']").val()),
 	$tagged("date",      $("#ref_journal>form>table>tbody>tr>td>input[name='date']").val()),
