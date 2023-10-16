@@ -139,7 +139,7 @@ function ref_web() {
 	}
 	
 	var $reftag = [
-		"<ref>{{Cite web ",
+		"<ref>{{Cite web|和書",
 		"|url=" + $url,
 		" |title=" + $title,
 		" |publisher =" + $("#ref_web>form>table>tbody>tr>td>input[name='publisher']").val(),
@@ -179,7 +179,7 @@ function ref_pdf() {
 	}
 	
 	var $reftag = [
-		"<ref>{{Cite web",
+		"<ref>{{Cite web|和書",
 		"|url="    + $("#ref_pdf>form>table>tbody>tr>td>input[name='url']").val(),
 		" |title=" + $("#ref_pdf>form>table>tbody>tr>td>input[name='title']").val(),
 		" |format=PDF",
@@ -250,7 +250,7 @@ function ref_archive() {
 		$archiveDate = $("#ref_archive>form>table>tbody>tr>td>input[name='archivedate']").val();
 	}
 	var $reftag = [
-		"<ref>{{Cite web",
+		"<ref>{{Cite web|和書",
 		"|url=" + $url,
 		" |title=" + $title,
 		" |publisher=" + $("#ref_archive>form>table>tbody>tr>td>input[name='publisher']").val(),
@@ -650,7 +650,7 @@ function ref_tweet() {
 	var $tweet = $("#ref_tweet>form>table>tbody>tr>td>textarea[name='tweet']").val();
 	$tweet = $tweet.replace(/\r?\n/g, '<br>');
 	var $reftag = [
-		"<ref>{{Cite tweet",
+		"<ref>{{Cite tweet|和書",
 		"|author=" + $("#ref_tweet>form>table>tbody>tr>td>input[name='twitter_name']").val(),
 		" |user=" + $("#ref_tweet>form>table>tbody>tr>td>input[name='twitter_id']").val(),
 		" |number=" + $("#ref_tweet>form>table>tbody>tr>td>input[name='tweet_id']").val(),
