@@ -356,6 +356,11 @@ function ref_book() {
 	}
 	*/
 	var $date = $("#ref_book>form>table>tbody>tr>td>input[name='yearDirect']").val();
+	if ($date.length === 4) {
+		$date = " |year=" + $date;
+	} else {
+		$date = " |date=" + $date;
+	}
 	
 	var $jpno  = $("#ref_book>form>table>tbody>tr>td>input[name='jpno']").val();
 	if($checkEmpty($jpno) === 1) {
@@ -383,7 +388,7 @@ function ref_book() {
 	$tagged("edition", $("#ref_book>form>table>tbody>tr>td>input[name='edition']").val()),
 	$tagged("series",  $("#ref_book>form>table>tbody>tr>td>input[name='series']").val()),
 	$tagged("volume",  $("#ref_book>form>table>tbody>tr>td>input[name='volume']").val()),
-		" |date=" + $date,
+		           $date,
 		" |publisher=" + $("#ref_book>form>table>tbody>tr>td>input[name='publisher']").val(),
 	$pagestag(          $("#ref_book>form>table>tbody>tr>td>input[name='pages']").val()),
 		" |isbn=" +    $("#ref_book>form>table>tbody>tr>td>input[name='isbn']").val(),
