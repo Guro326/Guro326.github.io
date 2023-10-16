@@ -20,7 +20,11 @@
 // 2023-07-21 @Guro326
 //            リセットボタンで出力textareaもクリアする
 //            書籍bookの「巻」を復活
-//            新聞に和書を追加・webでもpagesを入れる（紙と共に）・版もついか
+//            新聞に和書を追加・webでもpagesを入れる（紙と共に）・版も追加
+
+// 2023-10-16 @Guro326
+//            Cite web に |和書| を追加
+//            書籍bookの日付（date）、4桁だけだった場合は year にした
 
 // ページ読み込み時に非選択フォームを非表示にする
 jQuery(document).ready(function($){
@@ -304,7 +308,7 @@ function date_replace() {
 	$str = $("#ref_book>form>table>tbody>tr>td>input[name='yearDirect']").val();
 	$str = $str.replace(/[０-９]/g, function(s) {
         return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
-    }).replace(/―|—|－|–|－|ー/g,'-').replace(/[^0-9\-]/g, '');
+    }).replace(/―|—|－|–|－|ー|／|\//g,'-').replace(/[^0-9\-]/g, '');
 	$("#ref_book>form>table>tbody>tr>td>input[name='yearDirect']").val($str);
 }
 
