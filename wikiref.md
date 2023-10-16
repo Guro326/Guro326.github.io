@@ -88,7 +88,7 @@ input[type="text"]
 	
 <input type="radio" name="type" onclick="type_change('#ref_web')" id="web" value="#ref_web" /><label for="web">Web出典</label><br />
 	
-<input type="radio" name="type" onclick="type_change('#ref_archive')" id="archive" value="#ref_archive" /><label for="archive">Archive(web.archive.org)を含める場合</label><br />
+<input type="radio" name="type" onclick="type_change('#ref_archive')" id="archive" value="#ref_archive" /><label for="archive">Archive(.archive.org)を含める場合</label><br />
 	
 <input type="radio" name="type" onclick="type_change('#ref_pdf')" id="pdf" value="#ref_pdf" /><label for="pdf">PDF出典</label><br />
 	
@@ -208,7 +208,7 @@ input[type="text"]
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">Web出典（Cite web）<br />
+<th colspan="2">Web出典（Cite web |和書）<br />
 	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web" target="_new">Cite web</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
@@ -251,8 +251,8 @@ input[type="text"]
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">Web出典（Archiveを含める場合）<br />
-	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%95%E3%82%8C%E3%81%9F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E5%A0%B4%E5%90%88" target="_new">Cite web</a>&#x7d;&#x7d;</th>
+<th colspan="2">Web出典（Archiveを含める場合）（Cite news |和書）<br />
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:_web#%E3%82%A2%E3%83%BC%E3%82%AB%E3%82%A4%E3%83%96%E3%81%95%E3%82%8C%E3%81%9F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E5%A0%B4%E5%90%88" target="_new"> web</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
     <td class="first_input">アドレス url</td>
@@ -292,8 +292,8 @@ input[type="text"]
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">pdf出典（Cite web format=PDF）<br />
-	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#PDF%E3%81%AE%E5%A0%B4%E5%90%88" target="_new">Cite web</a>&#x7d;&#x7d;</th>
+<th colspan="2">pdf出典（ web format=PDF）<br />
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:_web#PDF%E3%81%AE%E5%A0%B4%E5%90%88" target="_new"> web</a>&#x7d;&#x7d;</th>
 </tr>
 <tr>
 </tr>
