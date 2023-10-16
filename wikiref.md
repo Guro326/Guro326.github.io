@@ -293,7 +293,7 @@ input[type="text"]
 <table class="ref_input">
 <tr>
 <th colspan="2">pdf出典（Cite web |和書|format=PDF）<br />
-	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#PDF%E3%81%AE%E5%A0%B4%E5%90%88" target="_new"> Cite web</a>&#x7d;&#x7d;</th> 
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#%E4%BD%BF%E7%94%A8%E4%BE%8B" target="_new"> Cite web</a>&#x7d;&#x7d;</th> 
 </tr>
 <tr>
 </tr>
