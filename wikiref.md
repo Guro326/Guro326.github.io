@@ -158,7 +158,7 @@ input[type="text"]
     <td><input type="text" name="yearDirect" id="directInput" class="yearInput" onchange="date_replace()" placeholder="半角でyyyy-mm-dd"><span class="directInputNote">（月日は省略可）</span><input type="date" name="yearCalender" id="calenderInput" class="yearInput"></td>
 </tr-->
 <tr>
-    <td>出版日付 date</td>
+    <td>出版日付 date/year</td>
     <td><input type="text" name="yearDirect" onchange="date_replace()" placeholder="半角でYYYY-MM-DD"><br /><span class="directInputNote">（月･日は省略可）</span></td>
 </tr>
 <tr>
