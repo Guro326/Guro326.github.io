@@ -292,8 +292,8 @@ input[type="text"]
 <form>
 <table class="ref_input">
 <tr>
-<th colspan="2">pdf出典（ web format=PDF）<br />
-	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:_web#PDF%E3%81%AE%E5%A0%B4%E5%90%88" target="_new"> web</a>&#x7d;&#x7d;</th>
+<th colspan="2">pdf出典（Cite web |和書|format=PDF）<br />
+	&#x7b;&#x7b;<a href="https://ja.wikipedia.org/wiki/Template:Cite_web#PDF%E3%81%AE%E5%A0%B4%E5%90%88" target="_new"> Cite web</a>&#x7d;&#x7d;</th> 
 </tr>
 <tr>
 </tr>
